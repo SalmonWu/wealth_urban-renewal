@@ -4,49 +4,210 @@ html
         meta(charset='utf-8')
         meta(http-equiv='X-UA-Compatible', content='IE=edge')
         meta(name='viewport', content='width=device-width, initial-scale=1.0, user-scalable=no, shrink-to-fit=no, minimum-scale=1.0, maximum-scale=1.0')
-        title Bobbi
-        meta(property='og:title', content='')
-        meta(property='og:image' content='assets/cms/images/og.png')
-        meta(property='og:url', content='')
-        meta(property='og:description', content='')
-        meta(name='keywords', content='')
-        meta(name='description', content='')
+        title 〈第一屆〉危老都更博覽會 樂居好城市
+        // Global site tag (gtag.js) - Google Analytics
+        script(async src='https://www.googletagmanager.com/gtag/js?id=UA-57864110-2')
+        script.
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-57864110-2');
+        // Facebook og
+        meta(property='og:site_name' content='〈第一屆〉危老都更博覽會 樂居好城市')
+        meta(property='og:title', content='〈第一屆〉危老都更博覽會 樂居好城市')
+        meta(property='og:image' content='/assets/cms/images/fb-og.png')
+        meta(property='og:url', content='http://www.wealth.com.tw/safehouse1/')
+        meta(property='og:description', content='危老都更博覽會：匯聚都市更新相關產業透過博覽會的舉辦，鼓勵民眾從都更及危老重建的思考角度出發、闔家參與，善用政府的危老都更政策，搭配營建業者提出的翻修或改建方案，讓家有更好的未來！')
+        meta(property='og:type' content='website')
+        meta(property='fb:page_id' content='398858137734889')
+        meta(name='keywords', content='危老建築、都市更新、都更、房價、不動產、房地產、貸款、房仲、老屋改建、住宅容積、加速重建條例、危老條例、耐震、地震、都市計劃、建築容積、都市再生、文化資產、老屋重建、危老獎勵、危老重建、老屋翻新')
+        meta(name='description', content='危老都更博覽會：匯聚都市更新相關產業透過博覽會的舉辦，鼓勵民眾從都更及危老重建的思考角度出發、闔家參與，善用政府的危老都更政策，搭配營建業者提出的翻修或改建方案，讓家有更好的未來！')
         link(rel='stylesheet', href='assets/cms/css/bootstrap-reset-breakpoint.css')
         link(rel='stylesheet', href='assets/cms/css/layout.css')
         link(rel='stylesheet', href='assets/cms/css/style.css')
 
 body
-    // ============================== main start ===============================
+    // ============================== header start =============================
     header
         .header-wrap
+            nav
+                .menu-list
+                    ul 
+                        li
+                            a(href='#expo') 博覽會  
+                        li
+                            a(href='#seminar') 研討會
+                        li
+                            a(href='') 什麼是危老都更
+                        li
+                            a(href='') 精彩影片
+                        li
+                            a(href='') 精彩照片
+                        li
+                            a(href='') 合作夥伴
+                        li.fb-btn
+                            a(href='') 
+            .header-content
+                .main-title
+                    h1
+                        span
+                            img(src='')
+                        img(src='')
+                    p.slogan
+    // ============================== header close =============================
+    
+    // ============================== main start ===============================
     main
         article
-            section
-
-
+            section.activity
+                #expo.activity-info.wrap
+                    .light
+                        img(src='')
+                    .content
+                        h3 博覽會
+                        p 
+                            | 透過博覽會的舉辦，匯聚相關產業，
+                            br
+                            | 讓民眾更了解危險老舊建築與都市更新的重要性！
+                            br
+                            | 大手牽小手，善用政府政策，
+                            br
+                            | 一起為我們的城市未來努力吧！
+                        p 
+                            span.tag 時間
+                            | 108年12月7日(六)  早上9:30~下午16:00
+                        p 
+                            span.tag 地點
+                            | 國立臺北商業大學(臺北市中正區濟南路一段321號)
+                            a.map-icon(href='')
+                                img(src='')
+                        .info-list
+                            a(href='') 舞台活動
+                            a(href='') 攤位地圖
+                            a(href='') 活動體驗
+                            a(href='') 抽獎專區
+                #seminar.activity-info.wrap
+                    .light
+                        img(src='')
+                    .content
+                        h3 研討會
+                        p.slogan 智慧住 樂活居 臺灣都更現在式
+                        p 
+                            | 據內政部資料，未來10年全臺超過30年的房屋將達近600萬戶；
+                            br
+                            | 面對大量老舊房屋，中央政府積極加速修訂「都市更新三法」來推動都更！
+                            br
+                            | 本次研討會將匯集各方智言與推動事務的經驗進行探討。
+                            br
+                            | 全程免費，歡迎踴躍報名
+                        p 
+                            span.tag 日期
+                            | 108年12月7日(六)  下午14：00~16：10
+                        p 
+                            span.tag 地點
+                            | 國立臺北商業大學 承曦樓10樓 國際會議廳 (臺北市中正區濟南路一段321號) 
+                            a.map-icon(href='')
+                                img(src='')
+                        .info-list
+                            a(href='') 與會貴賓
+                            a(href='') 論壇流程
+                            a(href='') 立即報名
+            section.about-renewal
+                .wrap
+                    .content
+                        ul 
+                            li.pic01
+                                a(href='') 都市更新和危老重建有什麼不同？
+                            li.pic02 
+                                a(href='') 都市更新和危老重建有什麼不同？
+                            li.pic03 
+                                a(href='') 都市更新和危老重建有什麼不同？
+                            li.pic04 
+                                a(href='') 都市更新和危老重建有什麼不同？
+                            li.pic05 
+                                a(href='') 都市更新和危老重建有什麼不同？
+                            li.pic06 
+                                a(href='') 都市更新和危老重建有什麼不同？
+            section.playlist
+                .wrap
+                    .content
+                        ul 
+                            li
+                                .video-content
+                                    iframe()
+                            li
+                                .video-content
+                                    iframe()
+                            li
+                                .video-content
+                                    iframe()
+                            li
+                                .video-content
+                                    iframe()
+                            li
+                                .video-content
+                                    iframe()
+                            li
+                                .video-content
+                                    iframe()
+            section.gallary
+                .wrap
+                    .content
+                        ul 
+                            li.pic01
+                                img(src='')
+                            li.pic02 
+                                img(src='')
+                            li.pic03 
+                                img(src='')
+                            li.pic04 
+                                img(src='')
+                            li.pic05 
+                                img(src='')
+                            li.pic06 
+                                img(src='')
+            section.partner
+                .wrap 
+                    .content
+                        h3 合作夥伴
+                        .partner-list
+                            h4 指導單位
+                            ul 
+                                li
+                                    a(href='')
+                        .partner-list
+                            h4 主辦單位
+                            ul 
+                                li
+                                    a(href='')
+                        .partner-list
+                            h4 協辦單位
+                            ul 
+                                li
+                                    a(href='')
+                        .partner-list
+                            h4 共同主辦
+                            ul 
+                                li
+                                    a(href='')
+                        .partner-list
+                            h4 合作單位
+                            ul 
+                                li
+                                    a(href='')
     // ============================== main close ===============================
+
+    // ============================== footer start =============================
+    footer 
+        .footer-wrap
+            | 本網站版權屬於財信雜誌社股份有限公司所有，據稱本站同意，不要擅用文字及圖案
+            br
+            | 讀者服務專線：（02）2551-2561分機224〜226
+    // ============================== footer close =============================
 
 // Common
 script(src='assets/cms/js/module/jquery.min.js')
 script(src='assets/cms/js/bootstrap/bootstrap.min.js')
 script(src='assets/cms/js/bootstrap/bootstrap.bundle.min.js')
-script.
-    $(function () {
-        $(window).on('scroll', function(){
-            var windowTop = $(window).scrollTop();
-            if ($(window).width() > 768) {
-                if(windowTop >= 212) {
-                    $('.header').css({'position':'fixed', 'top':'0px'});
-                } else {
-                    $('.header').css({'position':'absolute','top':'212px'});
-                }
-            } else {
-            }
-        });
-
-        $('.anchor').on('click', function(){
-            $('html, body').animate({
-                scrollTop: $($.attr(this, 'href')).offset().top - 200
-            }, 800);
-        })
-    });
+script(src='assets/cms/js/main.js')
