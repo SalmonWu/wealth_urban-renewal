@@ -29,7 +29,7 @@ html
 
 body
     // ============================== header start =============================
-    header
+    header#header
         .header-wrap
             nav
                 .menu-list
@@ -47,26 +47,28 @@ body
                         li
                             a(href='') 合作夥伴
                         li.fb-btn
-                            a(href='') 
+                            a(href='')
+                                img(src='assets/cms/images/fb-icon.png')
             .header-content
                 .main-title
                     h1
                         span
-                            img(src='')
-                        img(src='')
+                            img(src='assets/cms/images/good-city.png')
+                        img(src='assets/cms/images/main-title.png')
                     p.slogan
+                        img(src='assets/cms/images/description.png')
+                a.handbook-dl(href='#') 大會手冊下載
     // ============================== header close =============================
-    
+    a.go-top(href='#header')
     // ============================== main start ===============================
     main
         article
             section.activity
-                #expo.activity-info.wrap
+                #expo.wrap
                     .light
-                        img(src='')
                     .content
                         h3 博覽會
-                        p 
+                        p.caption
                             | 透過博覽會的舉辦，匯聚相關產業，
                             br
                             | 讓民眾更了解危險老舊建築與都市更新的重要性！
@@ -74,26 +76,26 @@ body
                             | 大手牽小手，善用政府政策，
                             br
                             | 一起為我們的城市未來努力吧！
-                        p 
-                            span.tag 時間
-                            | 108年12月7日(六)  早上9:30~下午16:00
-                        p 
-                            span.tag 地點
-                            | 國立臺北商業大學(臺北市中正區濟南路一段321號)
-                            a.map-icon(href='')
-                                img(src='')
+                        .activity-info
+                            p
+                                span.tag 時間
+                                | 108年12月7日(六)  早上9:30~下午16:00
+                            p
+                                span.tag 地點
+                                | 國立臺北商業大學(臺北市中正區濟南路一段321號)
+                                a.map-icon(href='')
+                                    img(src='assets/cms/images/map-icon.png')
                         .info-list
                             a(href='') 舞台活動
                             a(href='') 攤位地圖
                             a(href='') 活動體驗
                             a(href='') 抽獎專區
-                #seminar.activity-info.wrap
+                #seminar.wrap
                     .light
-                        img(src='')
                     .content
                         h3 研討會
                         p.slogan 智慧住 樂活居 臺灣都更現在式
-                        p 
+                        p.caption
                             | 據內政部資料，未來10年全臺超過30年的房屋將達近600萬戶；
                             br
                             | 面對大量老舊房屋，中央政府積極加速修訂「都市更新三法」來推動都更！
@@ -101,14 +103,15 @@ body
                             | 本次研討會將匯集各方智言與推動事務的經驗進行探討。
                             br
                             | 全程免費，歡迎踴躍報名
-                        p 
-                            span.tag 日期
-                            | 108年12月7日(六)  下午14：00~16：10
-                        p 
-                            span.tag 地點
-                            | 國立臺北商業大學 承曦樓10樓 國際會議廳 (臺北市中正區濟南路一段321號) 
-                            a.map-icon(href='')
-                                img(src='')
+                        .activity-info
+                            p
+                                span.tag 日期
+                                | 108年12月7日(六)  下午14：00~16：10
+                            p
+                                span.tag 地點
+                                | 國立臺北商業大學 承曦樓10樓 國際會議廳 (臺北市中正區濟南路一段321號)
+                                a.map-icon(href='')
+                                    img(src='assets/cms/images/map-icon.png')
                         .info-list
                             a(href='') 與會貴賓
                             a(href='') 論壇流程
@@ -156,17 +159,17 @@ body
                     .content
                         ul 
                             li.pic01
-                                img(src='')
+                                img(src='assets/cms/images/')
                             li.pic02 
-                                img(src='')
+                                img(src='assets/cms/images/')
                             li.pic03 
-                                img(src='')
+                                img(src='assets/cms/images/')
                             li.pic04 
-                                img(src='')
+                                img(src='assets/cms/images/')
                             li.pic05 
-                                img(src='')
+                                img(src='assets/cms/images/')
                             li.pic06 
-                                img(src='')
+                                img(src='assets/cms/images/')
             section.partner
                 .wrap 
                     .content

@@ -9,3 +9,9 @@
 @mixin breakpoint($value)
   @media screen and (min-width: $value)
     @content
+
+@mixin clearfix()
+  &::after
+    display: block
+    content: ''
+    clear: both
