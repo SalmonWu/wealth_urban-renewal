@@ -1,0 +1,52 @@
+doctype html
+html
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0, user-scalable=no, shrink-to-fit=no, minimum-scale=1.0, maximum-scale=1.0')
+        title Bobbi
+        meta(property='og:title', content='')
+        meta(property='og:image' content='assets/cms/images/og.png')
+        meta(property='og:url', content='')
+        meta(property='og:description', content='')
+        meta(name='keywords', content='')
+        meta(name='description', content='')
+        link(rel='stylesheet', href='assets/cms/css/bootstrap-reset-breakpoint.css')
+        link(rel='stylesheet', href='assets/cms/css/layout.css')
+        link(rel='stylesheet', href='assets/cms/css/style.css')
+
+body
+    // ============================== main start ===============================
+    header
+        .header-wrap
+    main
+        article
+            section
+
+
+    // ============================== main close ===============================
+
+// Common
+script(src='assets/cms/js/module/jquery.min.js')
+script(src='assets/cms/js/bootstrap/bootstrap.min.js')
+script(src='assets/cms/js/bootstrap/bootstrap.bundle.min.js')
+script.
+    $(function () {
+        $(window).on('scroll', function(){
+            var windowTop = $(window).scrollTop();
+            if ($(window).width() > 768) {
+                if(windowTop >= 212) {
+                    $('.header').css({'position':'fixed', 'top':'0px'});
+                } else {
+                    $('.header').css({'position':'absolute','top':'212px'});
+                }
+            } else {
+            }
+        });
+
+        $('.anchor').on('click', function(){
+            $('html, body').animate({
+                scrollTop: $($.attr(this, 'href')).offset().top - 200
+            }, 800);
+        })
+    });

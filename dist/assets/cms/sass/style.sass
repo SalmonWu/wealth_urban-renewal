@@ -1,0 +1,431 @@
+/*-----------------------------------------------------------------------------
+ * [TABLE OF CONTENTS]
+ *    +header
+ *		=
+ *    +main
+ *		=
+ *-----------------------------------------------------------------------------
+
+@import variable
+@import mixin
+
+/**
+ **
+ ** =header
+ **
+ **
+.header
+  position: fixed
+  top: 140px
+  left: 0
+  z-index: 9
+  width: 100%
+  background-color: rgba(255, 255, 255, .8)
+  @include breakpoint($sm-up)
+    position: absolute
+    top: 212px
+
+
+.header-wrap
+  max-width: 750px
+  height: 67px
+  padding: 0
+  margin: 0 auto
+  ul
+    padding: 0
+    li
+      float: left
+      text-align: center
+      a
+        color: $black
+        font-weight: bold
+        font-size: 1.125rem
+        line-height: 67px
+        letter-spacing: -1px
+  @include breakpoint($sm-up)
+    ul
+      padding: 0 15%
+      li
+        a
+          font-size: 1.625rem
+
+
+/**
+ **
+ ** =main
+ **
+ **
+
+main
+  width: 100%
+  max-width: 750px
+  margin: 0 auto
+  article
+    background-color: #fff
+  h3
+    margin-bottom: 0
+    font-weight: bold
+    font-size: 1.75rem
+    @include breakpoint($sm-up)
+      font-size: 3.375rem
+  .content
+    padding: 0 25px
+    .more
+      display: block
+      width: 100%
+      height: 50px
+      background-color: $black
+      color: #fff
+      font-size: 1.25rem
+      text-align: center
+      line-height: 50px
+      transition: .25s
+      &:hover
+        background-color: #333
+      @include breakpoint($sm-up)
+        height: 66px
+        font-size: 2rem
+        line-height: 66px
+    #annualContent
+      .more
+        max-width: calc(100% - 9%)
+        margin: 56px auto 0
+    ul, .slick-content
+      li, .slick-item
+        padding: 0 7.5px
+        margin-bottom: 56px
+        text-align: center
+        a
+          display: block
+        .title
+          padding-top: 16px
+          color: $black
+          font-weight: bold
+          font-size: 1.25rem
+          letter-spacing: 2px
+          span
+            font-size: 1rem
+        .price
+          padding-top: 4px
+          color: #fe4660
+          font-weight: bold
+          font-size: 1.5rem
+          &::before
+            content: '$'
+            font-size: 1rem
+          span
+            display: block
+            color: #4e4e4e
+            font-size: 1rem
+        .coming-soon
+          padding-top: 16px
+        .info
+          margin-top: 18px
+          a
+            display: inline
+            color: $black
+            font-weight: bold
+            font-size: 0.75rem
+            text-decoration: underline
+        .check
+          position: relative
+          padding-right: 20px
+          &::after
+            content: ''
+            position: absolute
+            top: 0
+            right: 0
+            width: 13px
+            height: 100%
+            background: url("../images/arrow.png") center center no-repeat
+            background-size: 13px auto
+            transform: rotateZ(0deg)
+            transition: .3s
+          &.collapsed
+            &::after
+              transform: rotateZ(-180deg)
+        .check-article
+          width: 100%
+          font-size: 0.875rem
+          line-height: 32px
+          text-align: center
+          .caption
+            padding: 16px
+            margin-top: 16px
+            background-color: #f7f7f7
+          p
+            margin-bottom: 8px
+            &:last-of-type
+              margin-bottom: 0
+        @include breakpoint(375px)
+          .info
+            a
+              font-size: 1rem
+        @include breakpoint($sm-up)
+          margin-bottom: 96px
+          .title
+            padding-top: 34px
+            font-size: 2.125rem
+            span
+              font-size: 1.5rem
+          .price
+            padding-top: 14px
+            font-size: 2.4375rem
+            &::before
+              font-size: 1.875rem
+            span
+              display: inline
+              margin-left: 8px
+              font-size: 1.5rem
+          .coming-soon
+            padding-top: 32px
+          .info
+            padding: 0 8px
+            a
+              font-size: 1.625rem
+          .check
+            padding-right: 29px
+            &::after
+              width: 21px
+              background-size: 21px 11px
+          .check-article
+            font-size: 1.25rem
+
+  .filter-img
+    position: relative
+    padding: 45px 25px 50px
+  .makeup
+    .filter-img
+      @include breakpoint($sm-up)
+        &::before
+          content: ''
+          display: block
+          position: absolute
+          z-index: 9
+          top: -60px
+          right: 0
+          width: 119px
+          height: 223px
+          background: url('../images/ribbon1.png') center center no-repeat
+        &::after
+          content: ''
+          display: block
+          position: absolute
+          z-index: 9
+          bottom: -40px
+          left: 0
+          width: 86px
+          height: 179px
+          background: url('../images/ribbon2.png') center center no-repeat
+    .content
+      position: relative
+      @include breakpoint($sm-up)
+        &::before
+          content: ''
+          display: block
+          position: absolute
+          z-index: 9
+          top: 40%
+          left: 0
+          width: 49px
+          height: 181px
+          background: url('../images/ribbon3.png') center center no-repeat
+    h3
+      position: absolute
+      top: calc(50% - 16px)
+      right: 48px
+    @include breakpoint($sm-up)
+      h3
+        top: calc(50% - 32px)
+        right: 64px
+  .skin-care
+    .filter-img
+      @include breakpoint($sm-up)
+        &::before
+          content: ''
+          display: block
+          position: absolute
+          z-index: 9
+          top: -20px
+          left: 0
+          width: 86px
+          height: 208px
+          background: url('../images/ribbon4.png') center center no-repeat
+    .content
+      position: relative
+      @include breakpoint($sm-up)
+        &::before
+          content: ''
+          display: block
+          position: absolute
+          z-index: 9
+          top: 3%
+          right: 0
+          width: 93px
+          height: 188px
+          background: url('../images/ribbon5.png') center center no-repeat
+        &::after
+          content: ''
+          display: block
+          position: absolute
+          z-index: 9
+          top: 45%
+          right: 0
+          width: 66px
+          height: 231px
+          background: url('../images/ribbon6.png') center center no-repeat
+    h3
+      position: absolute
+      top: calc(50% - 16px)
+      left: 40px
+    @include breakpoint($sm-up)
+      h3
+        top: calc(50% - 32px)
+        left: 64px
+  .select
+    .filter-img
+      @include breakpoint($sm-up)
+        &::before
+          content: ''
+          display: block
+          position: absolute
+          z-index: 9
+          top: -50px
+          left: 0
+          width: 89px
+          height: 210px
+          background: url('../images/ribbon7.png') center center no-repeat
+    .content
+      position: relative
+      @include breakpoint($sm-up)
+        &::after
+          content: ''
+          display: block
+          position: absolute
+          z-index: 9
+          bottom: 0
+          right: 0
+          width: 99px
+          height: 429px
+          background: url('../images/ribbon10.png') center center no-repeat
+    h3
+      position: absolute
+      top: calc(50% - 16px)
+      right: 40px
+    @include breakpoint($sm-up)
+      h3
+        top: calc(50% - 32px)
+        right: 64px
+  .luxe
+    .content
+      position: relative
+      padding: 48px 16px 32px
+      margin-bottom: 56px
+      background: url('../images/luxe-bg.png') center top no-repeat
+      background-size: calc(100% - 50px) 100%
+      @include breakpoint($sm-up)
+        padding: 80px 0 64px
+      h3
+        width: 100%
+        text-align: center
+      .slick-content
+        .slick-item
+          margin-bottom: 0
+          .media
+            width: 80%
+            margin: 0 auto
+            img
+              margin: 0 auto
+          .sub
+            color: #db9f4e
+            font-size: 0.875rem
+          .title
+            padding-top: 8px
+            line-height: 1.4
+          .price
+            margin-bottom: 8px
+            font-size: 1rem
+            &::before
+              content: none
+            span
+              color: #fe4660
+              font-size: 1.5rem
+          .btn
+            img
+              max-width: 80%
+              margin: 0 auto
+          @include breakpoint($sm-up)
+            .sub
+              font-size: 1.25rem
+            .price
+              margin-bottom: 16px
+              font-size: 1.875rem
+              &::before
+                content: none
+              span
+                font-size: 2.4375rem
+            .btn
+              img
+                max-width: none
+      .slick-arrow
+        position: absolute
+        z-index: 3
+        width: 19px
+        height: 48px
+        text-indent: -10000px
+      .slick-prev
+        left: 32px
+        background: url('../images/arrow-l.png') center center no-repeat
+        background-size: 100%
+      .slick-next
+        right: 32px
+        background: url('../images/arrow-r.png') center center no-repeat
+        background-size: 100%
+      @include breakpoint($sm-up)
+        .slick-prev
+          left: 50px
+        .slick-next
+          right: 50px
+
+  .annual
+    position: relative
+    padding-top: 32px
+    padding-bottom: 30px
+    background: url(../images/schedule_bg.jpg) center top no-repeat
+    background-size: cover
+    @include breakpoint($sm-up)
+      padding-top: 72px
+    h3
+      margin-bottom: 16px
+      text-align: center
+      @include breakpoint($sm-up)
+        margin-bottom: 32px
+    .content
+      padding: 0
+    .nav-tabs
+      padding: 0 4.5%
+      border: 0
+      .nav-item
+        padding: 0
+        margin: 0
+        .nav-link
+          height: 40px
+          padding: 0
+          border: 0
+          border-radius: 0
+          color: #fff
+          font-weight: bold
+          font-size: 1.125rem
+          line-height: 40px
+          &.active
+            text-decoration: underline
+          @include breakpoint($sm-up)
+            height: 63px
+            font-size: 2rem
+            line-height: 63px
+        #north-tab
+          background-color: rgba(0, 0, 0, .9)
+        #center-tab
+          background-color: #858585
+        #south-tab
+          background-color: #aeaeae
