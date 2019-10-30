@@ -25,6 +25,7 @@
     <meta name="keywords" content="危老建築、都市更新、都更、房價、不動產、房地產、貸款、房仲、老屋改建、住宅容積、加速重建條例、危老條例、耐震、地震、都市計劃、建築容積、都市再生、文化資產、老屋重建、危老獎勵、危老重建、老屋翻新">
     <meta name="description" content="危老都更博覽會：匯聚都市更新相關產業透過博覽會的舉辦，鼓勵民眾從都更及危老重建的思考角度出發、闔家參與，善用政府的危老都更政策，搭配營建業者提出的翻修或改建方案，讓家有更好的未來！">
     <link rel="stylesheet" href="assets/cms/css/bootstrap-reset-breakpoint.css">
+    <link rel="stylesheet" href="assets/cms/css/module/animate.css">
     <link rel="stylesheet" href="assets/cms/css/layout.css">
     <link rel="stylesheet" href="assets/cms/css/style.css">
   </head>
@@ -33,27 +34,27 @@
   <!-- ============================== header start =============================-->
   <header id="header">
     <div class="header-wrap">
-      <nav>
-        <div class="menu-list">
-          <ul> 
-            <li><a href="#expo">博覽會  </a></li>
-            <li><a href="#seminar">研討會</a></li>
-            <li><a href="">什麼是危老都更</a></li>
-            <li><a href="">精彩影片</a></li>
-            <li><a href="">精彩照片</a></li>
-            <li><a href="">合作夥伴</a></li>
-            <li class="fb-btn"><a href=""><img src="assets/cms/images/fb-icon.png"></a></li>
-          </ul>
-        </div>
-      </nav>
-      <div class="header-content">
+      <div class="header-content wow fadeIn">
         <div class="main-title">
-          <h1><span><img src="assets/cms/images/good-city.png"></span><img src="assets/cms/images/main-title.png"></h1>
-          <p class="slogan"><img src="assets/cms/images/description.png"></p>
-        </div><a class="handbook-dl" href="#">大會手冊下載</a>
+          <h1><span class="wow zoomIn" data-wow-duration=".5s" data-wow-delay=".6s"><img src="assets/cms/images/good-city.png"></span><img class="wow fadeInLeft" src="assets/cms/images/main-title.png" data-wow-duration=".8s" data-wow-delay=".3s"></h1>
+          <p class="slogan wow fadeInRight" data-wow-duration=".8s" data-wow-delay=".3s"><img src="assets/cms/images/description.png"></p>
+        </div>
       </div>
     </div>
   </header>
+  <nav>
+    <div class="menu-list">
+      <ul>
+        <li><a href="#expo">博覽會</a></li>
+        <li><a href="#seminar">研討會</a></li>
+        <li><a href="">什麼是危老都更</a></li>
+        <li><a href="">精彩影片</a></li>
+        <li><a href="">精彩照片</a></li>
+        <li><a href="">合作夥伴</a></li>
+        <li class="fb-btn"><a href=""><img src="assets/cms/images/fb-icon.png"></a></li>
+      </ul>
+    </div>
+  </nav>
   <!-- ============================== header close =============================--><a class="go-top" href="#header"></a>
   <!-- ============================== main start ===============================-->
   <main>
@@ -68,7 +69,7 @@
               <p><span class="tag">時間</span>108年12月7日(六)  早上9:30~下午16:00</p>
               <p><span class="tag">地點</span>國立臺北商業大學(臺北市中正區濟南路一段321號)<a class="map-icon" href=""><img src="assets/cms/images/map-icon.png"></a></p>
             </div>
-            <div class="info-list"><a href="">舞台活動</a><a href="">攤位地圖</a><a href="">活動體驗</a><a href="">抽獎專區</a></div>
+            <div class="info-list"><a href="#" data-toggle="modal" data-target="#stageModal">舞台活動</a><a href="#" data-toggle="modal" data-target="#mapModal">攤位地圖</a><a href="#" data-toggle="modal" data-target="#activityModal">活動體驗</a><a href="#" data-toggle="modal" data-target="#lotteryModal">抽獎專區</a></div>
           </div>
         </div>
         <div class="wrap" id="seminar">
@@ -81,20 +82,21 @@
               <p><span class="tag">日期</span>108年12月7日(六)  下午14：00~16：10</p>
               <p><span class="tag">地點</span>國立臺北商業大學 承曦樓10樓 國際會議廳 (臺北市中正區濟南路一段321號)<a class="map-icon" href=""><img src="assets/cms/images/map-icon.png"></a></p>
             </div>
-            <div class="info-list"><a href="">與會貴賓</a><a href="">論壇流程</a><a href="">立即報名</a></div>
+            <div class="info-list"><a href="#" data-toggle="modal" data-target="#guestModal">與會貴賓</a><a href="#" data-toggle="modal" data-target="#stepModal">論壇流程</a><a href="#" data-toggle="modal" data-target="#signupModal">立即報名</a></div>
           </div>
         </div>
       </section>
       <section class="about-renewal">
         <div class="wrap">
           <div class="content">
+            <h3>什麼是危老都更</h3>
             <ul> 
-              <li class="pic01"><a href="">都市更新和危老重建有什麼不同？</a></li>
-              <li class="pic02"> <a href="">都市更新和危老重建有什麼不同？</a></li>
-              <li class="pic03"> <a href="">都市更新和危老重建有什麼不同？</a></li>
-              <li class="pic04"> <a href="">都市更新和危老重建有什麼不同？</a></li>
-              <li class="pic05"> <a href="">都市更新和危老重建有什麼不同？</a></li>
-              <li class="pic06"> <a href="">都市更新和危老重建有什麼不同？</a></li>
+              <li class="pic01"><a href=""><span>都市更新和危老重建有什麼不同？</span></a></li>
+              <li class="pic02"> <a href=""><span>都市更新和危老重建有什麼不同？</span></a></li>
+              <li class="pic03"> <a href=""><span>都市更新和危老重建有什麼不同？</span></a></li>
+              <li class="pic04"> <a href=""><span>都市更新和危老重建有什麼不同？</span></a></li>
+              <li class="pic05"> <a href=""><span>都市更新和危老重建有什麼不同？</span></a></li>
+              <li class="pic06"> <a href=""><span>都市更新和危老重建有什麼不同？</span></a></li>
             </ul>
           </div>
         </div>
@@ -102,35 +104,36 @@
       <section class="playlist">
         <div class="wrap">
           <div class="content">
+            <h3>精彩影片</h3>
             <ul> 
               <li>
                 <div class="video-content">
-                  <iframe></iframe>
+                  <iframe src="https://www.youtube.com/embed/gNdlZAaHNEM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
               </li>
               <li>
                 <div class="video-content">
-                  <iframe></iframe>
+                  <iframe src="https://www.youtube.com/embed/gNdlZAaHNEM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
               </li>
               <li>
                 <div class="video-content">
-                  <iframe></iframe>
+                  <iframe src="https://www.youtube.com/embed/gNdlZAaHNEM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
               </li>
               <li>
                 <div class="video-content">
-                  <iframe></iframe>
+                  <iframe src="https://www.youtube.com/embed/gNdlZAaHNEM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
               </li>
               <li>
                 <div class="video-content">
-                  <iframe></iframe>
+                  <iframe src="https://www.youtube.com/embed/gNdlZAaHNEM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
               </li>
               <li>
                 <div class="video-content">
-                  <iframe></iframe>
+                  <iframe src="https://www.youtube.com/embed/gNdlZAaHNEM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
               </li>
             </ul>
@@ -140,13 +143,14 @@
       <section class="gallary">
         <div class="wrap">
           <div class="content">
+            <h3>精彩照片</h3>
             <ul> 
-              <li class="pic01"><img src="assets/cms/images/"></li>
-              <li class="pic02"> <img src="assets/cms/images/"></li>
-              <li class="pic03"> <img src="assets/cms/images/"></li>
-              <li class="pic04"> <img src="assets/cms/images/"></li>
-              <li class="pic05"> <img src="assets/cms/images/"></li>
-              <li class="pic06"> <img src="assets/cms/images/"></li>
+              <li class="pic01"><span><img src="assets/cms/images/pic07.jpg"></span></li>
+              <li class="pic02"><span><img src="assets/cms/images/pic08.jpg"></span></li>
+              <li class="pic03"><span><img src="assets/cms/images/pic09.jpg"></span></li>
+              <li class="pic04"><span><img src="assets/cms/images/pic10.jpg"></span></li>
+              <li class="pic05"><span><img src="assets/cms/images/pic11.jpg"></span></li>
+              <li class="pic06"><span><img src="assets/cms/images/pic12.jpg"></span></li>
             </ul>
           </div>
         </div>
@@ -193,12 +197,33 @@
   <!-- ============================== main close ===============================-->
   <!-- ============================== footer start =============================-->
   <footer> 
-    <div class="footer-wrap">本網站版權屬於財信雜誌社股份有限公司所有，據稱本站同意，不要擅用文字及圖案<br>讀者服務專線：（02）2551-2561分機224〜226</div>
+    <div class="footer-wrap">本網站版權屬於財信雜誌社股份有限公司所有，據稱本站同意，不要擅用文字及圖案<br><br>讀者服務專線：（02）2551-2561分機224〜226</div>
   </footer>
   <!-- ============================== footer close =============================-->
+  <div class="modal fade" id="activityModal" tabindex="-1" role="dialog" aria-labelledby="activityModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="activityModalLabel">Modal title</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        </div>
+        <div class="modal-body">...</div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Close</button>
+          <button class="btn btn-primary" type="button">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 <!-- Common-->
 <script src="assets/cms/js/module/jquery.min.js"></script>
 <script src="assets/cms/js/bootstrap/bootstrap.min.js"></script>
 <script src="assets/cms/js/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="assets/cms/js/module/wow.min.js"></script>
 <script src="assets/cms/js/main.js"></script>
+<script>
+  $(function () {
+      new WOW().init();
+  });
+</script>

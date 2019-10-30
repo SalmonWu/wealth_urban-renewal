@@ -24,6 +24,7 @@ html
         meta(name='keywords', content='危老建築、都市更新、都更、房價、不動產、房地產、貸款、房仲、老屋改建、住宅容積、加速重建條例、危老條例、耐震、地震、都市計劃、建築容積、都市再生、文化資產、老屋重建、危老獎勵、危老重建、老屋翻新')
         meta(name='description', content='危老都更博覽會：匯聚都市更新相關產業透過博覽會的舉辦，鼓勵民眾從都更及危老重建的思考角度出發、闔家參與，善用政府的危老都更政策，搭配營建業者提出的翻修或改建方案，讓家有更好的未來！')
         link(rel='stylesheet', href='assets/cms/css/bootstrap-reset-breakpoint.css')
+        link(rel='stylesheet', href='assets/cms/css/module/animate.css')
         link(rel='stylesheet', href='assets/cms/css/layout.css')
         link(rel='stylesheet', href='assets/cms/css/style.css')
 
@@ -31,33 +32,32 @@ body
     // ============================== header start =============================
     header#header
         .header-wrap
-            nav
-                .menu-list
-                    ul 
-                        li
-                            a(href='#expo') 博覽會  
-                        li
-                            a(href='#seminar') 研討會
-                        li
-                            a(href='') 什麼是危老都更
-                        li
-                            a(href='') 精彩影片
-                        li
-                            a(href='') 精彩照片
-                        li
-                            a(href='') 合作夥伴
-                        li.fb-btn
-                            a(href='')
-                                img(src='assets/cms/images/fb-icon.png')
-            .header-content
+            .header-content.wow.fadeIn
                 .main-title
                     h1
-                        span
+                        span.wow.zoomIn(data-wow-duration='.5s' data-wow-delay='.6s')
                             img(src='assets/cms/images/good-city.png')
-                        img(src='assets/cms/images/main-title.png')
-                    p.slogan
+                        img.wow.fadeInLeft(src='assets/cms/images/main-title.png' data-wow-duration='.8s' data-wow-delay='.3s')
+                    p.slogan.wow.fadeInRight(data-wow-duration='.8s' data-wow-delay='.3s')
                         img(src='assets/cms/images/description.png')
-                a.handbook-dl(href='#') 大會手冊下載
+    nav
+        .menu-list
+            ul
+                li
+                    a(href='#expo') 博覽會
+                li
+                    a(href='#seminar') 研討會
+                li
+                    a(href='') 什麼是危老都更
+                li
+                    a(href='') 精彩影片
+                li
+                    a(href='') 精彩照片
+                li
+                    a(href='') 合作夥伴
+                li.fb-btn
+                    a(href='')
+                        img(src='assets/cms/images/fb-icon.png')
     // ============================== header close =============================
     a.go-top(href='#header')
     // ============================== main start ===============================
@@ -86,10 +86,10 @@ body
                                 a.map-icon(href='')
                                     img(src='assets/cms/images/map-icon.png')
                         .info-list
-                            a(href='') 舞台活動
-                            a(href='') 攤位地圖
-                            a(href='') 活動體驗
-                            a(href='') 抽獎專區
+                            a(href='#' data-toggle='modal' data-target='#stageModal') 舞台活動
+                            a(href='#' data-toggle='modal' data-target='#mapModal') 攤位地圖
+                            a(href='#' data-toggle='modal' data-target='#activityModal') 活動體驗
+                            a(href='#' data-toggle='modal' data-target='#lotteryModal') 抽獎專區
                 #seminar.wrap
                     .light
                     .content
@@ -113,63 +113,78 @@ body
                                 a.map-icon(href='')
                                     img(src='assets/cms/images/map-icon.png')
                         .info-list
-                            a(href='') 與會貴賓
-                            a(href='') 論壇流程
-                            a(href='') 立即報名
+                            a(href='#' data-toggle='modal' data-target='#guestModal') 與會貴賓
+                            a(href='#' data-toggle='modal' data-target='#stepModal') 論壇流程
+                            a(href='#' data-toggle='modal' data-target='#signupModal') 立即報名
             section.about-renewal
                 .wrap
                     .content
+                        h3 什麼是危老都更
                         ul 
                             li.pic01
-                                a(href='') 都市更新和危老重建有什麼不同？
+                                a(href='')
+                                    span 都市更新和危老重建有什麼不同？
                             li.pic02 
-                                a(href='') 都市更新和危老重建有什麼不同？
+                                a(href='')
+                                    span 都市更新和危老重建有什麼不同？
                             li.pic03 
-                                a(href='') 都市更新和危老重建有什麼不同？
+                                a(href='')
+                                    span 都市更新和危老重建有什麼不同？
                             li.pic04 
-                                a(href='') 都市更新和危老重建有什麼不同？
+                                a(href='')
+                                    span 都市更新和危老重建有什麼不同？
                             li.pic05 
-                                a(href='') 都市更新和危老重建有什麼不同？
+                                a(href='')
+                                    span 都市更新和危老重建有什麼不同？
                             li.pic06 
-                                a(href='') 都市更新和危老重建有什麼不同？
+                                a(href='')
+                                    span 都市更新和危老重建有什麼不同？
             section.playlist
                 .wrap
                     .content
+                        h3 精彩影片
                         ul 
                             li
                                 .video-content
-                                    iframe()
+                                    iframe(src="https://www.youtube.com/embed/gNdlZAaHNEM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
                             li
                                 .video-content
-                                    iframe()
+                                    iframe(src="https://www.youtube.com/embed/gNdlZAaHNEM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
                             li
                                 .video-content
-                                    iframe()
+                                    iframe(src="https://www.youtube.com/embed/gNdlZAaHNEM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
                             li
                                 .video-content
-                                    iframe()
+                                    iframe(src="https://www.youtube.com/embed/gNdlZAaHNEM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
                             li
                                 .video-content
-                                    iframe()
+                                    iframe(src="https://www.youtube.com/embed/gNdlZAaHNEM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
                             li
                                 .video-content
-                                    iframe()
+                                    iframe(src="https://www.youtube.com/embed/gNdlZAaHNEM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
             section.gallary
                 .wrap
                     .content
+                        h3 精彩照片
                         ul 
                             li.pic01
-                                img(src='assets/cms/images/')
-                            li.pic02 
-                                img(src='assets/cms/images/')
-                            li.pic03 
-                                img(src='assets/cms/images/')
-                            li.pic04 
-                                img(src='assets/cms/images/')
-                            li.pic05 
-                                img(src='assets/cms/images/')
-                            li.pic06 
-                                img(src='assets/cms/images/')
+                                span
+                                    img(src='assets/cms/images/pic07.jpg')
+                            li.pic02
+                                span
+                                    img(src='assets/cms/images/pic08.jpg')
+                            li.pic03
+                                span
+                                    img(src='assets/cms/images/pic09.jpg')
+                            li.pic04
+                                span
+                                    img(src='assets/cms/images/pic10.jpg')
+                            li.pic05
+                                span
+                                    img(src='assets/cms/images/pic11.jpg')
+                            li.pic06
+                                span
+                                    img(src='assets/cms/images/pic12.jpg')
             section.partner
                 .wrap 
                     .content
@@ -206,11 +221,30 @@ body
         .footer-wrap
             | 本網站版權屬於財信雜誌社股份有限公司所有，據稱本站同意，不要擅用文字及圖案
             br
+            br
             | 讀者服務專線：（02）2551-2561分機224〜226
     // ============================== footer close =============================
+
+    #activityModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='activityModalLabel', aria-hidden='true')
+        .modal-dialog(role='document')
+            .modal-content
+                .modal-header
+                    h5#activityModalLabel.modal-title Modal title
+                    button.close(type='button', data-dismiss='modal', aria-label='Close')
+                        span(aria-hidden='true') ×
+                .modal-body
+                    | ...
+                .modal-footer
+                    button.btn.btn-secondary(type='button', data-dismiss='modal') Close
+                    button.btn.btn-primary(type='button') Save changes
 
 // Common
 script(src='assets/cms/js/module/jquery.min.js')
 script(src='assets/cms/js/bootstrap/bootstrap.min.js')
 script(src='assets/cms/js/bootstrap/bootstrap.bundle.min.js')
+script(src='assets/cms/js/module/wow.min.js')
 script(src='assets/cms/js/main.js')
+script.
+    $(function () {
+        new WOW().init();
+    });
