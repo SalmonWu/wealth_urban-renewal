@@ -93,7 +93,7 @@ nav ul li a:hover::after, nav ul li a.active::after {
   height: 10px;
 }
 
-nav ul li.fb-btn a::after {
+nav ul li.sns-btn a::after {
   content: none;
 }
 
@@ -105,8 +105,11 @@ nav ul li.fb-btn a::after {
   nav ul li:not(:first-child) {
     margin-left: 48px;
   }
-  nav ul li.fb-btn {
+  nav ul li.sns-btn {
     margin-left: 40px;
+  }
+  nav ul li.sns-btn .fb img {
+    vertical-align: -8px;
   }
   nav ul li a {
     font-size: 1.5rem;
@@ -641,4 +644,113 @@ footer {
   font-size: 0.8125rem;
   line-height: 14px;
   text-align: center;
+}
+
+.modal .modal-dialog {
+  max-width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .modal .modal-dialog {
+    max-width: 1000px;
+  }
+}
+
+.modal .modal-content {
+  border: 0;
+  border-radius: 0;
+}
+
+.modal .modal-header {
+  justify-content: center;
+  -ms-flex-pack: center;
+  align-items: center;
+  -ms-flex-align: center;
+  border: 0;
+}
+
+.modal .modal-header img {
+  margin-right: 48px;
+}
+
+.modal .modal-header h5 {
+  color: #00a29a;
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+.modal .modal-header .close {
+  position: absolute;
+  top: 16px;
+  right: -36px;
+  width: 52px;
+  height: 52px;
+  padding: 0;
+  background-color: #00a29a;
+  opacity: 1;
+}
+
+.modal .modal-header .close span {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.modal .modal-body {
+  padding: 0 0 0 72px;
+}
+
+.modal .modal-body .time-line .items {
+  position: relative;
+}
+
+.modal .modal-body .time-line .time {
+  display: inline-block;
+  padding-right: 32px;
+  color: #00a29a;
+  font-size: 1.5rem;
+  vertical-align: top;
+}
+
+.modal .modal-body .time-line .list {
+  display: inline-block;
+  position: relative;
+  padding-left: 32px;
+}
+
+.modal .modal-body .time-line .list::before, .modal .modal-body .time-line .list::after {
+  display: block;
+  content: '';
+  position: absolute;
+}
+
+.modal .modal-body .time-line .list::before {
+  top: 11px;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #00a29a;
+}
+
+.modal .modal-body .time-line .list::after {
+  top: 11px;
+  left: 7px;
+  width: 1px;
+  height: 100%;
+  background-color: #00a29a;
+}
+
+.modal .modal-body .time-line ol {
+  list-style: none;
+  padding: 0;
+}
+
+.modal .modal-body .time-line ol li {
+  padding-bottom: 32px;
+  color: #666;
+  font-size: 1.5rem;
+}
+
+.modal .modal-body .time-line ol li.title {
+  color: #000;
 }

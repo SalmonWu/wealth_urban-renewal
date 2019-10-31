@@ -65,7 +65,7 @@
         <li><a href="">精彩影片</a></li>
         <li><a href="">精彩照片</a></li>
         <li><a href="">合作夥伴</a></li>
-        <li class="fb-btn"><a href=""><img src="assets/cms/images/fb-icon.png"></a></li>
+        <li class="sns-btn"><a class="fb" href=""><img src="assets/cms/images/fb-icon.png"></a><a class="line d-block d-sm-none" href=""><img src="assets/cms/images/fb-icon.png"></a></li>
       </ul>
     </div>
   </nav>
@@ -81,7 +81,7 @@
             <p class="caption">透過博覽會的舉辦，匯聚危老及都更相關產業，<br>透過輕鬆有趣、寓教於樂的活動形式，<br>讓民眾更了解危險老舊建築與都市更新的重要性！<br>大手牽小手，善用政府政策，<br>一起為我們的城市未來努力吧！</p>
             <div class="activity-info">
               <p><span class="tag">時間</span>108年12月7日(六)  早上9:30~下午16:00</p>
-              <p><span class="tag">地點</span>國立臺北商業大學(臺北市中正區濟南路一段321號)<a class="map-icon" href=""><img src="assets/cms/images/map-icon.png"></a></p>
+              <p><span class="tag">地點</span>國立臺北商業大學(臺北市中正區濟南路一段321號)<a class="map-icon" href="" target="_blank"><img src="assets/cms/images/map-icon.png"></a></p>
             </div>
             <div class="info-list"><a href="#" data-toggle="modal" data-target="#stageModal">舞台活動</a><a href="#" data-toggle="modal" data-target="#mapModal">攤位內容</a><a href="#" data-toggle="modal" data-target="#activityModal">活動體驗</a><a href="#" data-toggle="modal" data-target="#lotteryModal">抽獎專區</a></div>
           </div>
@@ -96,9 +96,11 @@
             </p>
             <div class="activity-info">
               <p><span class="tag">日期</span>108年12月7日(六)  下午14：00~16：10</p>
-              <p><span class="tag">地點</span>國立臺北商業大學 承曦樓10樓 國際會議廳 (臺北市中正區濟南路一段321號)<a class="map-icon" href=""><img src="assets/cms/images/map-icon.png"></a></p>
+              <p><span class="tag">地點</span>國立臺北商業大學 承曦樓10樓 國際會議廳 (臺北市中正區濟南路一段321號)<a class="map-icon" href="" target="_blank"><img src="assets/cms/images/map-icon.png"></a></p>
             </div>
-            <div class="info-list"><a href="#" data-toggle="modal" data-target="#stepModal">論壇流程</a><a href="#" data-toggle="modal" data-target="#signupModal">立即報名</a></div>
+            <div class="info-list">
+              <!-- a(href='#' data-toggle='modal' data-target='#guestModal') 與會貴賓--><a href="#" data-toggle="modal" data-target="#stepModal">論壇流程</a><a href="#" data-toggle="modal" data-target="#signupModal">立即報名</a>
+            </div>
           </div>
         </div>
       </section>
@@ -218,18 +220,61 @@
     <div class="footer-wrap">本網站版權屬於財信雜誌社股份有限公司所有，據稱本站同意，不要擅用文字及圖案<br><br>讀者服務專線：（02）2551-2561分機224〜226</div>
   </footer>
   <!-- ============================== footer close =============================-->
+  <div class="modal fade" id="stageModal" tabindex="-1" role="dialog" aria-labelledby="activityModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header"><img src="assets/cms/images/house-icon-g.png">
+          <h5 class="modal-title">
+             舞台活動</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">✕</span></button>
+        </div>
+        <div class="modal-body">
+          <div class="time-line"> 
+            <ul> 
+              <li class="items"> 
+                <div class="time">10:00~10:10</div>
+                <div class="list"> 
+                  <ol> 
+                    <li class="title">【博覽會開場】</li>
+                  </ol>
+                </div>
+              </li>
+              <li class="items">
+                <div class="time">10:00~10:10</div>
+                <div class="list"> 
+                  <ol> 
+                    <li class="title">【開場表演】</li>
+                    <li>北商啦啦舞 NTUB Cheer Dance</li>
+                  </ol>
+                </div>
+              </li>
+              <li class="items">
+                <div class="time">10:00~10:10</div>
+                <div class="list"> 
+                  <ol>
+                    <li class="title">【長官致詞】</li>
+                    <li>中華民國總統 蔡英文</li>
+                    <li>主辦單位 長官</li>
+                    <li>協辦單位 長官</li>
+                    <li>共同舉辦 長官</li>
+                  </ol>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="modal fade" id="activityModal" tabindex="-1" role="dialog" aria-labelledby="activityModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="activityModalLabel">Modal title</h5>
-          <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        <div class="modal-header"><img src="assets/cms/images/house-icon-g.png">
+          <h5 class="modal-title">
+             活動體驗</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">✕</span></button>
         </div>
-        <div class="modal-body">...</div>
-        <div class="modal-footer">
-          <button class="btn btn-secondary" type="button" data-dismiss="modal">Close</button>
-          <button class="btn btn-primary" type="button">Save changes</button>
-        </div>
+        <div class="modal-body"></div>
       </div>
     </div>
   </div>

@@ -68,8 +68,10 @@ body
                     a(href='') 精彩照片
                 li
                     a(href='') 合作夥伴
-                li.fb-btn
-                    a(href='')
+                li.sns-btn
+                    a.fb(href='')
+                        img(src='assets/cms/images/fb-icon.png')
+                    a.line.d-block.d-sm-none(href='')
                         img(src='assets/cms/images/fb-icon.png')
     // ============================== header close =============================
     a.go-top(href='#header')
@@ -98,7 +100,7 @@ body
                             p
                                 span.tag 地點
                                 | 國立臺北商業大學(臺北市中正區濟南路一段321號)
-                                a.map-icon(href='')
+                                a.map-icon(href='' target='_blank')
                                     img(src='assets/cms/images/map-icon.png')
                         .info-list
                             a(href='#' data-toggle='modal' data-target='#stageModal') 舞台活動
@@ -130,10 +132,10 @@ body
                             p
                                 span.tag 地點
                                 | 國立臺北商業大學 承曦樓10樓 國際會議廳 (臺北市中正區濟南路一段321號)
-                                a.map-icon(href='')
+                                a.map-icon(href='' target='_blank')
                                     img(src='assets/cms/images/map-icon.png')
                         .info-list
-                            //- a(href='#' data-toggle='modal' data-target='#guestModal') 與會貴賓
+                            // a(href='#' data-toggle='modal' data-target='#guestModal') 與會貴賓
                             a(href='#' data-toggle='modal' data-target='#stepModal') 論壇流程
                             a(href='#' data-toggle='modal' data-target='#signupModal') 立即報名
             section.about-renewal
@@ -261,19 +263,63 @@ body
             br
             | 讀者服務專線：（02）2551-2561分機224〜226
     // ============================== footer close =============================
+    #stageModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='activityModalLabel', aria-hidden='true')
+        .modal-dialog(role='document')
+            .modal-content
+                .modal-header
+                    img(src='assets/cms/images/house-icon-g.png')
+                    h5.modal-title 
+                        | 舞台活動
+                    button.close(type='button', data-dismiss='modal', aria-label='Close')
+                        span(aria-hidden='true') ✕
+                .modal-body
+                    .time-line 
+                        ul 
+                            li.items 
+                                .time 10:00~10:10
+                                .list 
+                                    ol 
+                                        li.title 【博覽會開場】
+                            li.items
+                                .time 10:00~10:10
+                                .list 
+                                    ol 
+                                        li.title 【開場表演】
+                                        li 北商啦啦舞 NTUB Cheer Dance
+                            li.items
+                                .time 10:00~10:10
+                                .list 
+                                    ol
+                                        li.title 【長官致詞】
+                                        li 中華民國總統 蔡英文
+                                        li 主辦單位 長官
+                                        li 協辦單位 長官
+                                        li 共同舉辦 長官
+                            //- li.items【啟動儀式】
+                            //- li.items【危老都更小學堂Ⅰ】
+                            //-     ol
+                            //-         li 危老都更小常識有獎徵答
+                            //- li.items【抽獎時間Ⅰ】
+                            //- li.items【休息時間】
+                            //- li.items【危老都更小學堂Ⅱ】
+                            //-     ol
+                            //-         li 危老都更小常識有獎徵答
+                            //- li.items【小朋友唱唱跳跳學防災】
+                            //-     ol
+                            //-         li 東森YOYO台 柳丁哥哥&月亮姐姐
+                            //- li.items【抽獎時間Ⅱ 】
+                            //- li.items【博覽會圓滿結束】
 
     #activityModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='activityModalLabel', aria-hidden='true')
         .modal-dialog(role='document')
             .modal-content
                 .modal-header
-                    h5#activityModalLabel.modal-title Modal title
+                    img(src='assets/cms/images/house-icon-g.png')
+                    h5.modal-title 
+                        | 活動體驗
                     button.close(type='button', data-dismiss='modal', aria-label='Close')
-                        span(aria-hidden='true') ×
+                        span(aria-hidden='true') ✕
                 .modal-body
-                    | ...
-                .modal-footer
-                    button.btn.btn-secondary(type='button', data-dismiss='modal') Close
-                    button.btn.btn-primary(type='button') Save changes
 
 // Common
 script(src='assets/cms/js/module/jquery.min.js')

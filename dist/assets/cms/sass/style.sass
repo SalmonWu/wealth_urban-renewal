@@ -63,7 +63,7 @@ nav
           color: $green
           &::after
             height: 10px
-      &.fb-btn
+      &.sns-btn
         a
           &::after
             content: none
@@ -74,8 +74,11 @@ nav
         text-align: center
         &:not(:first-child)
           margin-left: 48px
-        &.fb-btn
+        &.sns-btn
           margin-left: 40px
+          .fb
+            img
+              vertical-align: -8px
         a
           font-size: 1.5rem
           line-height: 100px
@@ -429,8 +432,6 @@ main
         a 
           display: block
 
-
-
 footer
   padding: 30px 0
   background-color: $green
@@ -439,5 +440,78 @@ footer
   line-height: 14px
   text-align: center
   
+.modal 
+  .modal-dialog
+    max-width: 100%
+    @include breakpoint($sm-up)
+      max-width: 1000px
+  .modal-content 
+    border: 0
+    border-radius: 0
+  .modal-header 
+    justify-content: center
+    -ms-flex-pack: center
+    align-items: center
+    -ms-flex-align: center
+    border: 0
+    img 
+      margin-right: 48px
+    h5 
+      color: $green
+      font-weight: bold
+      font-size: 3rem
+    .close 
+      position: absolute
+      top: 16px
+      right: -36px
+      width: 52px
+      height: 52px 
+      padding: 0
+      background-color: $green
+      opacity: 1
+      span 
+        color: #fff
+        font-size: 1.5rem 
+  .modal-body 
+    padding: 0 0 0 72px
+    .time-line 
+      .items
+        position: relative
+      .time 
+        display: inline-block
+        padding-right: 32px
+        color: $green
+        font-size: 1.5rem
+        vertical-align: top
+      .list
+        display: inline-block
+        position: relative
+        padding-left: 32px
+        &::before, &::after
+          display: block
+          content: ''
+          position: absolute
+        &::before
+          top: 11px
+          left: 0
+          width: 16px
+          height: 16px
+          border-radius: 50%
+          background-color: $green
+        &::after
+          top: 11px
+          left: 7px
+          width: 1px 
+          height: 100%
+          background-color: $green
+      ol 
+        list-style: none 
+        padding: 0
+        li 
+          padding-bottom: 32px
+          color: $grey
+          font-size: 1.5rem
+          &.title 
+            color: $black
 
 
