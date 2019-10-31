@@ -9,6 +9,19 @@
 @import variable
 @import mixin
 
+.go-top
+  position: fixed
+  right: 32px
+  bottom: 56px
+  z-index: 11
+  width: 95px
+  height: 76px
+  background: url('../images/top-btn.png') center center no-repeat
+  opacity: 0
+  transition: .3s
+  &.show
+    opacity: 1
+
 /**
  **
  ** =header
@@ -41,12 +54,13 @@ nav
     font-size: 0
     text-align: center
     li
-      a
+      p,a
         display: block
         position: relative
         color: $grey
         font-weight: bold
         font-size: 1.5rem
+        cursor: pointer
         transition: .25s
         &::after
           display: block
@@ -79,7 +93,7 @@ nav
           .fb
             img
               vertical-align: -8px
-        a
+        p,a
           font-size: 1.5rem
           line-height: 100px
 
@@ -132,11 +146,22 @@ main
   width: 100%
   margin-top: -385px
   .activity
-    padding-top: 400px
+    position: relative
+    padding-top: 390px
     background: transparent url('../images/activity-top-bg.png') center top no-repeat
     background-size: 2000px auto
     color: #fff
-    font-size: 1.375rem
+    font-size: 1.25rem
+    &::after
+      display: block
+      content: ''
+      position: absolute
+      top: 400px
+      left: 0
+      z-index: -1
+      width: 100%
+      height: 100%
+      background-color: $green
     .wrap
       position: relative
     .content
@@ -162,10 +187,8 @@ main
         font-size: 3.75rem
     p
       margin-bottom: 16px
-      font-size: 1.5rem
       line-height: 42px
       &.caption
-        font-size: 1.375rem
         text-align: center
       .tag
         display: inline-block
@@ -176,7 +199,9 @@ main
         line-height: 43px
         text-align: center
       .map-icon
+        display: inline-block
         margin-left: 12px
+        animation: jump .5s infinite alternate
         vertical-align: 3px
     .activity-info
       margin: 0 auto 32px
@@ -189,7 +214,7 @@ main
         border-radius: 32.5px
         background-color: $orange
         color: #fff
-        font-size: 1.5rem
+        font-size: 1.25rem
         line-height: 65px
         transition: .25s
         &:not(:last-of-type)
@@ -208,7 +233,7 @@ main
         top: 0
         z-index: 2
         height: 100%
-        background: transparent url('../images/floor.png') center calc(100% * 3) no-repeat
+        background: transparent url('../images/floor.png') center bottom no-repeat
         background-size: 2000px auto
       &::after
         top: 166px
@@ -216,24 +241,26 @@ main
         height: calc(100% - 166px)
         background-color: $green
       .light
-        top: -163px
+        top: -188px
         height: 160px
       h3
-        margin-bottom: 48px
+        margin-bottom: 32px
       .content
         position: relative
         z-index: 3
         padding-bottom: 200px
-        margin-top: -166px
+        margin-top: -144px
       .activity-info
         max-width: 681px
     #seminar
       position: relative
       z-index: 3
-      padding-top: 132px
       padding-bottom: 207px
+      margin-top: -5px
       background: $green url('../images/floor2.png') center bottom no-repeat
       background-size: 2000px auto
+      h3
+        padding-top: 160px
       .light
         top: 0
         height: 140px
@@ -251,7 +278,7 @@ main
     h3
       max-width: 420px
       padding-bottom: 18px
-      margin: 0 auto 48px
+      margin: 0 auto 72px
       background: transparent url('../images/line02.png') center bottom no-repeat
       background-size: 100% auto
       color: $green
@@ -264,6 +291,7 @@ main
       li
         position: relative
         float: left
+        overflow: hidden
         width: calc(100% / 3)
         padding-top: 20%
         &.pic01
@@ -292,24 +320,27 @@ main
           align-items: center
           -ms-flex-align: center
           position: absolute
-          top: 0
+          bottom: 0
           left: 0
           width: 100%
-          height: 100%
+          height: 0
           background-color: rgba(243, 151, 0, .8)
           opacity: 0
-          color: #000 
-          font-size: 36px
+          color: #000
+          font-weight: bold
+          font-size: 1.625rem
           text-align: center
           transition: .3s
-          &:hover
-            opacity: 1
           span
             display: block
             position: relative
             padding-top: 93px
             background: url('../images/house-icon.png') center top no-repeat
             background-size: 77px 63px
+        &:hover
+          a
+            height: 100%
+            opacity: 1
   .playlist
     background: url('../images/brickwall.png') center center repeat
     background-size: 220px 138px
@@ -318,10 +349,9 @@ main
       padding-bottom: 40px
       margin: 0 auto
     .content
-      padding-top: 120px
+      padding-top: 76px
     h3
       max-width: 240px
-      padding-top: 76px
       padding-bottom: 18px
       margin: 0 auto 76px
       background: transparent url('../images/line01.png') center bottom no-repeat
@@ -426,9 +456,12 @@ main
       font-size: 0
       li 
         display: inline-block
-        max-width: 123px
+        max-width: 292px
+        margin-bottom: 32px
         &:not(:last-child)
           margin-right: 35px
+        &:nth-child(3n)
+          margin-right: 0
         a 
           display: block
 
@@ -453,6 +486,9 @@ footer
     -ms-flex-pack: center
     align-items: center
     -ms-flex-align: center
+    flex-wrap: wrap
+    -ms-flex-wrap: wrap
+    padding: 64px 0 72px
     border: 0
     img 
       margin-right: 48px
@@ -460,6 +496,13 @@ footer
       color: $green
       font-weight: bold
       font-size: 3rem
+    .subtitle
+      flex: 1 0 100%
+      -ms-flex: 1 0 100%
+      padding-top: 32px
+      color: $grey
+      font-size: 1.875rem
+      text-align: center
     .close 
       position: absolute
       top: 16px
@@ -473,38 +516,47 @@ footer
         color: #fff
         font-size: 1.5rem 
   .modal-body 
-    padding: 0 0 0 72px
-    .time-line 
+    .time-line
+      padding-left: 72px
+      padding-bottom: 112px
       .items
         position: relative
-      .time 
-        display: inline-block
-        padding-right: 32px
-        color: $green
-        font-size: 1.5rem
-        vertical-align: top
-      .list
-        display: inline-block
-        position: relative
-        padding-left: 32px
-        &::before, &::after
-          display: block
-          content: ''
-          position: absolute
-        &::before
-          top: 11px
-          left: 0
-          width: 16px
-          height: 16px
-          border-radius: 50%
-          background-color: $green
-        &::after
-          top: 11px
-          left: 7px
-          width: 1px 
-          height: 100%
-          background-color: $green
-      ol 
+        .time
+          display: inline-block
+          width: 163px
+          padding-right: 32px
+          color: $green
+          font-size: 1.5rem
+          vertical-align: top
+        .list
+          display: inline-block
+          position: relative
+          padding-left: 32px
+          &::before, &::after
+            display: block
+            content: ''
+            position: absolute
+          &::before
+            top: 11px
+            left: 0
+            width: 16px
+            height: 16px
+            border-radius: 50%
+            background-color: $green
+          &::after
+            top: 11px
+            left: 7px
+            width: 1px
+            height: 100%
+            background-color: $green
+        &:last-child
+          .list
+            &::after
+              content: none
+          ol
+            li
+              padding-bottom: 0
+      ol
         list-style: none 
         padding: 0
         li 
@@ -514,4 +566,107 @@ footer
           &.title 
             color: $black
 
+#activityModal
+  .modal-body
+    display: flex
+    display: -ms-flexbox
+    justify-content: space-between
+    -ms-flex-pack: justify
+    flex-wrap: wrap
+    -ms-flex-wrap: wrap
+    padding: 0 72px 104px
+  figure
+    width: calc((100% - 40px) / 2)
+    max-width: 400px
+    margin-bottom: 48px
+    &:nth-last-of-type(1),
+    &:nth-last-of-type(2)
+      margin-bottom: 0
+    img
+      width: 100%
+    figcaption
+      padding-top: 24px
+      color: $grey
+      font-size: 1.875rem
+      text-align: center
+#guestModal
+  .modal-body
+    display: flex
+    display: -ms-flexbox
+    justify-content: flex-start
+    -ms-flex-pack: start
+    flex-wrap: wrap
+    -ms-flex-wrap: wrap
+    max-width: 840px
+    padding: 0 0 64px
+    margin: 0 auto
+  figure
+    width: 186px
+    margin-bottom: 32px
+    &:not(:nth-of-type(4n))
+      margin-right: 32px
+    .media
+      position: relative
+      overflow: hidden
+      width: 186px
+      height: 186px
+      margin: 0 auto
+      border: 8px solid $green
+      border-radius: 50%
+      background-size: 105%
+      background-repeat: no-repeat
+      background-position: center center
+    figcaption
+      padding-top: 20px
+      text-align: center
+      p
+        font-size: 1.5rem
+        span
+          display: block
+          color: $green
+          font-size: 1rem
+          line-height: 28px
+#lotteryModal
+  .modal-body
+    padding: 0 56px 64px
+  .content
+    margin-bottom: 32px
+    .title
+      margin-bottom: 16px
+      color: $black
+      font-size: 2.25rem
+      line-height: normal
+      &::before
+        content: '•'
+        color: $green
+        font-size: 2.25rem
+        padding: 4px
+    p
+      color: $grey
+      font-size: 1.875rem
+      line-height: 48px
+    .award
+      @include clearfix()
+      padding-top: 32px
+      li
+        display: flex
+        display: -ms-flexbox
+        justify-content: center
+        -ms-flex-pack: center
+        align-items: center
+        -ms-flex-align: center
+        float: left
+        width: 270px
+        height: 270px
+        border: 5px solid $green
+        text-align: center
+        img
+          max-width: 100%
+        &:not(:nth-child(3n))
+          margin-right: 37px
 
+@keyframes jump
+  0%
+    transform: translateY(0px)
+  100%
+    transform: translateY(-8px)

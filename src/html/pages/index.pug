@@ -16,7 +16,7 @@ html
         // Facebook og
         meta(property='og:site_name' content='〈第一屆〉危老都更博覽會 樂居好城市')
         meta(property='og:title', content='〈第一屆〉危老都更博覽會 樂居好城市')
-        meta(property='og:image' content='/assets/cms/images/fb-og.png')
+        meta(property='og:image' content='./assets/cms/images/fb-og.png')
         meta(property='og:url', content='http://www.wealth.com.tw/safehouse1/')
         meta(property='og:description', content='危老都更博覽會：匯聚都市更新相關產業透過博覽會的舉辦，鼓勵民眾從都更及危老重建的思考角度出發、闔家參與，善用政府的危老都更政策，搭配營建業者提出的翻修或改建方案，讓家有更好的未來！')
         meta(property='og:type' content='website')
@@ -57,31 +57,31 @@ body
         .menu-list
             ul
                 li
-                    a(href='#expo') 博覽會
+                    p.anchor(data-href='#activity') 博覽會
                 li
-                    a(href='#seminar') 研討會
+                    p.anchor(data-href='#seminar') 研討會
                 li
-                    a(href='') 什麼是危老都更
+                    p.anchor(data-href='#about') 什麼是危老都更
                 li
-                    a(href='') 精彩影片
+                    p.anchor(data-href='#playlist') 精彩影片
                 li
-                    a(href='') 精彩照片
+                    p.anchor(data-href='#gallary') 精彩照片
                 li
-                    a(href='') 合作夥伴
+                    p.anchor(data-href='#partner') 合作夥伴
                 li.sns-btn
                     a.fb(href='')
                         img(src='assets/cms/images/fb-icon.png')
                     a.line.d-block.d-sm-none(href='')
                         img(src='assets/cms/images/fb-icon.png')
     // ============================== header close =============================
-    a.go-top(href='#header')
+    a.go-top.anchor(href='#header')
     // ============================== main start ===============================
     main
         article
-            section.activity
-                #expo.wrap
-                    .light
-                    .content
+            section.activity#activity
+                #expo.wrap.wow.fadeIn
+                    .light.wow.zoomIn(data-wow-duration='.8s' data-wow-delay='.5s')
+                    .content.wow.fadeInUp(data-wow-duration='.8s' data-wow-delay='.8s')
                         h3 博覽會
                         p.caption
                             | 透過博覽會的舉辦，匯聚危老及都更相關產業，
@@ -91,7 +91,6 @@ body
                             | 讓民眾更了解危險老舊建築與都市更新的重要性！
                             br
                             | 大手牽小手，善用政府政策，
-                            br
                             | 一起為我們的城市未來努力吧！
                         .activity-info
                             p
@@ -100,16 +99,16 @@ body
                             p
                                 span.tag 地點
                                 | 國立臺北商業大學(臺北市中正區濟南路一段321號)
-                                a.map-icon(href='' target='_blank')
+                                a.map-icon(href='https://goo.gl/maps/qx5TtxQojwdGvAkM8' target='_blank' data-wow-duration='.8s' data-wow-delay='1s' data-wow-iteration='infinite')
                                     img(src='assets/cms/images/map-icon.png')
                         .info-list
                             a(href='#' data-toggle='modal' data-target='#stageModal') 舞台活動
-                            a(href='#' data-toggle='modal' data-target='#mapModal') 攤位內容
+                            a(href='#' data-toggle='modal' data-target='#boothModal') 攤位內容
                             a(href='#' data-toggle='modal' data-target='#activityModal') 活動體驗
                             a(href='#' data-toggle='modal' data-target='#lotteryModal') 抽獎專區
-                #seminar.wrap
-                    .light
-                    .content
+                #seminar.wrap.wow.fadeIn
+                    .light.wow.zoomIn(data-wow-duration='.8s' data-wow-delay='.5s')
+                    .content.wow.fadeIn(data-wow-duration='.8s' data-wow-delay='.8s')
                         h3 研討會
                         p.slogan 智慧住 樂活居 台灣都更現在式
                         p.caption
@@ -123,7 +122,6 @@ body
                             | 本次研討會將匯集各方智言與推動都更實務經驗進行探討，
                             br
                             | 期盼提升民眾居住品質，達成全民智慧住、樂活居的理想生活！
-                            br
                             | 全程免費，歡迎踴躍參與。
                         .activity-info
                             p
@@ -132,62 +130,62 @@ body
                             p
                                 span.tag 地點
                                 | 國立臺北商業大學 承曦樓10樓 國際會議廳 (臺北市中正區濟南路一段321號)
-                                a.map-icon(href='' target='_blank')
+                                a.map-icon(href='https://goo.gl/maps/qx5TtxQojwdGvAkM8' target='_blank' data-wow-duration='.8s' data-wow-delay='1s' data-wow-iteration='infinite')
                                     img(src='assets/cms/images/map-icon.png')
                         .info-list
-                            // a(href='#' data-toggle='modal' data-target='#guestModal') 與會貴賓
+                            a(href='#' data-toggle='modal' data-target='#guestModal') 與會貴賓
                             a(href='#' data-toggle='modal' data-target='#stepModal') 論壇流程
-                            a(href='#' data-toggle='modal' data-target='#signupModal') 立即報名
+                            a(href='http://bit.ly/33MACD3' target='_blank') 立即報名
             section.about-renewal
-                .wrap
+                .wrap#about
                     .content
-                        h3 什麼是危老都更
-                        ul 
+                        h3.wow.fadeInUp 什麼是危老都更
+                        ul.wow.fadeInUp
                             li.pic01
-                                a(href='')
-                                    span 都市更新和危老重建有什麼不同？
+                                a(href='https://www.wealth.com.tw/home/articles/22809' target='_blank')
+                                    span 關鍵三問 老屋重建難題一次打包
                             li.pic02 
-                                a(href='')
-                                    span 都市更新和危老重建有什麼不同？
+                                a(href='https://www.wealth.com.tw/home/articles/22807' target='_blank')
+                                    span 簡易危老先熱身 再推大規模改建
                             li.pic03 
-                                a(href='')
-                                    span 都市更新和危老重建有什麼不同？
+                                a(href='https://www.wealth.com.tw/home/articles/22808' target='_blank')
+                                    span 破除三大謬誤 別讓老屋變棄屋
                             li.pic04 
-                                a(href='')
-                                    span 都市更新和危老重建有什麼不同？
+                                a(href='https://www.wealth.com.tw/home/articles/22804' target='_blank')
+                                    span 政策利多齊發 400萬戶老屋拚重生
                             li.pic05 
-                                a(href='')
-                                    span 都市更新和危老重建有什麼不同？
+                                a(href='https://www.wealth.com.tw/home/articles/22810' target='_blank')
+                                    span 建商3訣竅搞定50位地主 審查12天過關
                             li.pic06 
-                                a(href='')
-                                    span 都市更新和危老重建有什麼不同？
+                                a(href='javascript:;')
+                                    span 助力！政策加持是關鍵 鬆綁法令、培訓人才推進速度
             section.playlist
+                .wrap#playlist
+                    .content
+                        h3.wow.fadeInUp 精彩影片
+                        ul.wow.fadeInUp
+                            li
+                                .video-content
+                                    iframe(src="https://www.youtube.com/embed/gNdlZAaHNEM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+                            li
+                                .video-content
+                                    iframe(src="https://www.youtube.com/embed/gNdlZAaHNEM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+                            li
+                                .video-content
+                                    iframe(src="https://www.youtube.com/embed/gNdlZAaHNEM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+                            li
+                                .video-content
+                                    iframe(src="https://www.youtube.com/embed/gNdlZAaHNEM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+                            li
+                                .video-content
+                                    iframe(src="https://www.youtube.com/embed/gNdlZAaHNEM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+                            li
+                                .video-content
+                                    iframe(src="https://www.youtube.com/embed/gNdlZAaHNEM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+            section.gallary#gallary
                 .wrap
                     .content
-                        h3 精彩影片
-                        ul 
-                            li
-                                .video-content
-                                    iframe(src="https://www.youtube.com/embed/gNdlZAaHNEM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
-                            li
-                                .video-content
-                                    iframe(src="https://www.youtube.com/embed/gNdlZAaHNEM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
-                            li
-                                .video-content
-                                    iframe(src="https://www.youtube.com/embed/gNdlZAaHNEM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
-                            li
-                                .video-content
-                                    iframe(src="https://www.youtube.com/embed/gNdlZAaHNEM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
-                            li
-                                .video-content
-                                    iframe(src="https://www.youtube.com/embed/gNdlZAaHNEM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
-                            li
-                                .video-content
-                                    iframe(src="https://www.youtube.com/embed/gNdlZAaHNEM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
-            section.gallary
-                .wrap
-                    .content
-                        h3 精彩照片
+                        h3.wow.fadeInUp 精彩照片
                         ul 
                             li.pic01
                                 span
@@ -207,7 +205,7 @@ body
                             li.pic06
                                 span
                                     img(src='assets/cms/images/pic12.jpg')
-            section.partner
+            section.partner#partner
                 .wrap 
                     .content
                         h3 合作夥伴
@@ -215,41 +213,32 @@ body
                             h4 指導單位
                             ul 
                                 li
-                                    a(href='')
-                                        img(src='assets/cms/images/logo/logo01.png')
+                                    img(src='assets/cms/images/logo/logo01.png')
                                 li
-                                    a(href='')
-                                        img(src='assets/cms/images/logo/logo02.png')
+                                    img(src='assets/cms/images/logo/logo02.png')
                         .partner-list
                             h4 主辦單位
                             ul 
                                 li
-                                    a(href='')
-                                        img(src='assets/cms/images/logo/logo03.png')
+                                    img(src='assets/cms/images/logo/logo03.png')
                         .partner-list
                             h4 協辦單位
                             ul 
                                 li
-                                    a(href='')
-                                        img(src='assets/cms/images/logo/logo04.png')
+                                    img(src='assets/cms/images/logo/logo04.png')
                                 li
-                                    a(href='')
-                                        img(src='assets/cms/images/logo/logo05.png')
+                                    img(src='assets/cms/images/logo/logo05.png')
                         .partner-list
                             h4 共同主辦
                             ul 
                                 li
-                                    a(href='')
-                                        img(src='assets/cms/images/logo/logo06.png')
+                                    img(src='assets/cms/images/logo/logo06.png')
                                 li
-                                    a(href='')
-                                        img(src='assets/cms/images/logo/logo07.png')
+                                    img(src='assets/cms/images/logo/logo07.png')
                                 li
-                                    a(href='')
-                                        img(src='assets/cms/images/logo/logo08.png')
+                                    img(src='assets/cms/images/logo/logo08.png')
                                 li
-                                    a(href='')
-                                        img(src='assets/cms/images/logo/logo09.png')
+                                    img(src='assets/cms/images/logo/logo09.png')
                         .partner-list
                             h4 合作單位
                             img(src='assets/cms/images/logo/logo.png')
@@ -263,7 +252,7 @@ body
             br
             | 讀者服務專線：（02）2551-2561分機224〜226
     // ============================== footer close =============================
-    #stageModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='activityModalLabel', aria-hidden='true')
+    #stageModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='stageModalLabel', aria-hidden='true')
         .modal-dialog(role='document')
             .modal-content
                 .modal-header
@@ -281,13 +270,13 @@ body
                                     ol 
                                         li.title 【博覽會開場】
                             li.items
-                                .time 10:00~10:10
+                                .time 10:10~10:20
                                 .list 
                                     ol 
                                         li.title 【開場表演】
                                         li 北商啦啦舞 NTUB Cheer Dance
                             li.items
-                                .time 10:00~10:10
+                                .time 10:20~10:30
                                 .list 
                                     ol
                                         li.title 【長官致詞】
@@ -295,31 +284,259 @@ body
                                         li 主辦單位 長官
                                         li 協辦單位 長官
                                         li 共同舉辦 長官
-                            //- li.items【啟動儀式】
-                            //- li.items【危老都更小學堂Ⅰ】
-                            //-     ol
-                            //-         li 危老都更小常識有獎徵答
-                            //- li.items【抽獎時間Ⅰ】
-                            //- li.items【休息時間】
-                            //- li.items【危老都更小學堂Ⅱ】
-                            //-     ol
-                            //-         li 危老都更小常識有獎徵答
-                            //- li.items【小朋友唱唱跳跳學防災】
-                            //-     ol
-                            //-         li 東森YOYO台 柳丁哥哥&月亮姐姐
-                            //- li.items【抽獎時間Ⅱ 】
-                            //- li.items【博覽會圓滿結束】
+                            li.items
+                                .time 10:30~10:40
+                                .list
+                                    ol
+                                        li.title 【啟動儀式】
+                            li.items
+                                .time 10:40~11:30
+                                .list
+                                    ol
+                                        li.title 【危老都更小學堂Ⅰ】
+                                        li 危老都更小常識有獎徵答
+                            li.items
+                                .time 12:00~12:30
+                                .list
+                                    ol
+                                        li.title 【抽獎時間Ⅰ】
+                            li.items
+                                .time 12:30~13:30
+                                .list
+                                    ol
+                                        li.title 【休息時間】
+                            li.items
+                                .time 13:30~14:20
+                                .list
+                                    ol
+                                        li.title 【危老都更小學堂Ⅱ】
+                                        li 危老都更小常識有獎徵答
+                            li.items
+                                .time 14:30~15:00
+                                .list
+                                    ol
+                                        li.title 【小朋友唱唱跳跳學防災】
+                                        li 東森YOYO台 柳丁哥哥&月亮姐姐
+                            li.items
+                                .time 15:30~16:00
+                                .list
+                                    ol
+                                        li.title 【抽獎時間Ⅱ】
+                            li.items
+                                .time 16:00~
+                                .list
+                                    ol
+                                        li.title 【博覽會圓滿結束】
+    #stepModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='stepModalLabel', aria-hidden='true')
+        .modal-dialog(role='document')
+            .modal-content
+                .modal-header
+                    img(src='assets/cms/images/house-icon-g.png')
+                    h5.modal-title
+                        | 論壇流程
+                    button.close(type='button', data-dismiss='modal', aria-label='Close')
+                        span(aria-hidden='true') ✕
+                .modal-body
+                    .time-line
+                        ul
+                            li.items
+                                .time 13:30~14:00
+                                .list
+                                    ol
+                                        li.title 【貴賓報到】
+                            li.items
+                                .time 14:00~14:10
+                                .list
+                                    ol
+                                        li.title 【長官致詞】
+                                        li 行政院院長 蘇貞昌
+                            li.items
+                                .time 14:10~14:15
+                                .list
+                                    ol
+                                        li.title 【貴賓合影】
+                            li.items
+                                .time 14:15~14:40
+                                .list
+                                    ol
+                                        li.title 【長官致詞】
+                                        li 內政部部長 徐國勇
+                                        li 財政部部長 蘇建榮
+                                        li 臺灣中小企業銀行董事長 黃博怡
+                                        li 臺灣金聯資產管理公司董事長 郭文進
+                                        li 臺灣金融聯合都市更新服務公司董事長 林根旺
+                            li.items
+                                .time 14:40~15:10
+                                .list
+                                    ol
+                                        li.title 【專題演講】
+                                        li 議題：都更、合建、危老3途徑 迎接樂居好城市
+                                        li 主講人：內政部營建署
+                            li.items
+                                .time 15:10~16:20
+                                .list
+                                    ol
+                                        li.title 【研討會】
+                                        li 主持人：財訊雙週刊社長 謝金河
+                                        li 與談人：
+                                        li 內政部次長 花敬群
+                                        li 內政部營建署署長 吳欣修
+                                        li 臺灣中小企業銀行董事長 黃博怡
+                                        li 臺灣金聯資產管理公司董事長 郭文進
+                                        li 臺灣金融聯合都市更新服務公司董事長林根旺
+                                        li 現代地政代表
+                                        li 建商代表
+                            li.items
+                                .time 16:20~
+                                .list
+                                    ol
+                                        li 活動圓滿結束
 
     #activityModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='activityModalLabel', aria-hidden='true')
         .modal-dialog(role='document')
             .modal-content
                 .modal-header
                     img(src='assets/cms/images/house-icon-g.png')
-                    h5.modal-title 
+                    h5.modal-title
                         | 活動體驗
+                    p.subtitle 活動內容僅供參考，依實際為準，主辦單位有保留變更之權利。
                     button.close(type='button', data-dismiss='modal', aria-label='Close')
                         span(aria-hidden='true') ✕
                 .modal-body
+                    figure
+                        img(src='assets/cms/images/pic13.png')
+                        figcaption 一、地震車體驗
+                    figure
+                        img(src='assets/cms/images/pic14.png')
+                        figcaption 二、模擬裝修體驗
+                    figure
+                        img(src='assets/cms/images/pic15.png')
+                        figcaption 三、小小建築師
+                    figure
+                        img(src='assets/cms/images/pic16.png')
+                        figcaption 四、小小藝術家
+    //#boothModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='boothModalLabel', aria-hidden='true')
+    //    .modal-dialog(role='document')
+    //        .modal-content
+    //            .modal-header
+    //                img(src='assets/cms/images/house-icon-g.png')
+    //                h5.modal-title
+    //                    | 攤位內容
+    //                button.close(type='button', data-dismiss='modal', aria-label='Close')
+    //                    span(aria-hidden='true') ✕
+    //            .modal-body
+    #guestModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='lotteryModalLabel', aria-hidden='true')
+        .modal-dialog(role='document')
+            .modal-content
+                .modal-header
+                    img(src='assets/cms/images/house-icon-g.png')
+                    h5.modal-title
+                        | 與會貴賓
+                    button.close(type='button', data-dismiss='modal', aria-label='Close')
+                        span(aria-hidden='true') ✕
+                .modal-body
+                    figure
+                        .media(style='background-image: url("assets/cms/images/avatar.png");')
+                        figcaption
+                            p 蘇貞昌
+                                span 行政院院長
+                    figure
+                        .media(style='background-image: url("assets/cms/images/avatar.png");')
+                        figcaption
+                            p 徐國勇
+                                span 內政部部長
+                    figure
+                        .media(style='background-image: url("assets/cms/images/avatar.png");')
+                        figcaption
+                            p 蘇建榮
+                                span 財政部部長
+                    figure
+                        .media(style='background-image: url("assets/cms/images/avatar.png");')
+                        figcaption
+                            p 黃博怡
+                                span 臺灣中小企業銀行
+                                    br
+                                    | 董事長
+                    figure
+                        .media(style='background-image: url("assets/cms/images/avatar.png");')
+                        figcaption
+                            p 郭文進
+                                span 臺灣金聯資產管理公司
+                                    br
+                                    | 董事長
+                    figure
+                        .media(style='background-image: url("assets/cms/images/avatar.png");')
+                        figcaption
+                            p 林根旺
+                                span 臺灣金融
+                                    br
+                                    | 聯合都市更新服務公司
+                                    br
+                                    | 董事長
+                    figure
+                        .media(style='background-image: url("assets/cms/images/avatar.png");')
+                        figcaption
+                            p 謝金河
+                                span 財訊雙週刊社長
+                    figure
+                        .media(style='background-image: url("assets/cms/images/avatar.png");')
+                        figcaption
+                            p 花敬群
+                                span 內政部次長
+                    figure
+                        .media(style='background-image: url("assets/cms/images/avatar.png");')
+                        figcaption
+                            p 吳欣修
+                                span 內政部營建署署長
+                    figure
+                        .media(style='background-image: url("assets/cms/images/avatar.png");')
+                        figcaption
+                            p 王進祥
+                                span 現代地政聯盟關係企業
+                                    br
+                                    | 召集人
+                    figure
+                        .media(style='background-image: url("assets/cms/images/avatar.png");')
+                        figcaption
+                            p 建商代表
+    #lotteryModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='lotteryModalLabel', aria-hidden='true')
+        .modal-dialog(role='document')
+            .modal-content
+                .modal-header
+                    img(src='assets/cms/images/house-icon-g.png')
+                    h5.modal-title
+                        | 抽獎專區
+                    p.subtitle -集點蓋章抽大獎-
+                    button.close(type='button', data-dismiss='modal', aria-label='Close')
+                        span(aria-hidden='true') ✕
+                .modal-body
+                    .content
+                        p.title 抽獎時段
+                        p 上午場：12:00-12:30
+                            br
+                            | 下午場：15:30-16:00
+                    .content
+                        p.title 抽獎方式
+                        p 凡參加現場指定通關任務，
+                            br
+                            | 集滿4個區域8個印章就能參加抽獎！
+                            br
+                            | (抽獎聯於大會冊中，蓋滿章即可獲得抽獎機會乙次)
+                    .content
+                        p.title 獎項
+                        p iPhone11(128GB)、BESV智慧動能自行車、
+                            br
+                            | 九陽高速破壁冷熱調理機等好禮
+                            br
+                            | 獎項超豐富，等你來拿哦！
+                        ul.award
+                            li
+                                img(src='assets/cms/images/award01.jpg')
+                            li
+                                img(src='assets/cms/images/award01.jpg')
+                            li
+                                img(src='assets/cms/images/award01.jpg')
+
 
 // Common
 script(src='assets/cms/js/module/jquery.min.js')
