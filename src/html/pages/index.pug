@@ -27,8 +27,21 @@ html
         link(rel='stylesheet', href='assets/cms/css/module/animate.css')
         link(rel='stylesheet', href='assets/cms/css/layout.css')
         link(rel='stylesheet', href='assets/cms/css/style.css')
+        // Google Tag Manager
+        script.
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-5N96QXB');
+        // End Google Tag Manager
 
 body
+    // Google Tag Manager (noscript)
+    noscript
+        iframe(src='https://www.googletagmanager.com/ns.html?id=GTM-5N96QXB' height='0' width='0' style='display:none;visibility:hidden')
+    // End Google Tag Manager (noscript)
+
     // ============================== header start =============================
     header#header
         .header-wrap
@@ -69,7 +82,9 @@ body
                     .content
                         h3 博覽會
                         p.caption
-                            | 透過博覽會的舉辦，匯聚相關產業，
+                            | 透過博覽會的舉辦，匯聚危老及都更相關產業，
+                            br
+                            | 透過輕鬆有趣、寓教於樂的活動形式，
                             br
                             | 讓民眾更了解危險老舊建築與都市更新的重要性！
                             br
@@ -87,22 +102,27 @@ body
                                     img(src='assets/cms/images/map-icon.png')
                         .info-list
                             a(href='#' data-toggle='modal' data-target='#stageModal') 舞台活動
-                            a(href='#' data-toggle='modal' data-target='#mapModal') 攤位地圖
+                            a(href='#' data-toggle='modal' data-target='#mapModal') 攤位內容
                             a(href='#' data-toggle='modal' data-target='#activityModal') 活動體驗
                             a(href='#' data-toggle='modal' data-target='#lotteryModal') 抽獎專區
                 #seminar.wrap
                     .light
                     .content
                         h3 研討會
-                        p.slogan 智慧住 樂活居 臺灣都更現在式
+                        p.slogan 智慧住 樂活居 台灣都更現在式
                         p.caption
-                            | 據內政部資料，未來10年全臺超過30年的房屋將達近600萬戶；
+                            | 根據內政部統計資料(截至2018年3月)，
                             br
-                            | 面對大量老舊房屋，中央政府積極加速修訂「都市更新三法」來推動都更！
+                            | 現階段全台屋齡超過30年的房屋超過400萬戶，
+                            | 未來十年更將增加至近600萬戶。
                             br
-                            | 本次研討會將匯集各方智言與推動事務的經驗進行探討。
+                            | 面對全台大量老化房屋，中央政府積極加速修訂「都市更新三法」來加快都更推動的腳步；
                             br
-                            | 全程免費，歡迎踴躍報名
+                            | 本次研討會將匯集各方智言與推動都更實務經驗進行探討，
+                            br
+                            | 期盼提升民眾居住品質，達成全民智慧住、樂活居的理想生活！
+                            br
+                            | 全程免費，歡迎踴躍參與。
                         .activity-info
                             p
                                 span.tag 日期
@@ -113,7 +133,7 @@ body
                                 a.map-icon(href='')
                                     img(src='assets/cms/images/map-icon.png')
                         .info-list
-                            a(href='#' data-toggle='modal' data-target='#guestModal') 與會貴賓
+                            //- a(href='#' data-toggle='modal' data-target='#guestModal') 與會貴賓
                             a(href='#' data-toggle='modal' data-target='#stepModal') 論壇流程
                             a(href='#' data-toggle='modal' data-target='#signupModal') 立即報名
             section.about-renewal
@@ -194,26 +214,43 @@ body
                             ul 
                                 li
                                     a(href='')
+                                        img(src='assets/cms/images/logo/logo01.png')
+                                li
+                                    a(href='')
+                                        img(src='assets/cms/images/logo/logo02.png')
                         .partner-list
                             h4 主辦單位
                             ul 
                                 li
                                     a(href='')
+                                        img(src='assets/cms/images/logo/logo03.png')
                         .partner-list
                             h4 協辦單位
                             ul 
                                 li
                                     a(href='')
+                                        img(src='assets/cms/images/logo/logo04.png')
+                                li
+                                    a(href='')
+                                        img(src='assets/cms/images/logo/logo05.png')
                         .partner-list
                             h4 共同主辦
                             ul 
                                 li
                                     a(href='')
-                        .partner-list
-                            h4 合作單位
-                            ul 
+                                        img(src='assets/cms/images/logo/logo06.png')
                                 li
                                     a(href='')
+                                        img(src='assets/cms/images/logo/logo07.png')
+                                li
+                                    a(href='')
+                                        img(src='assets/cms/images/logo/logo08.png')
+                                li
+                                    a(href='')
+                                        img(src='assets/cms/images/logo/logo09.png')
+                        .partner-list
+                            h4 合作單位
+                            img(src='assets/cms/images/logo/logo.png')
     // ============================== main close ===============================
 
     // ============================== footer start =============================

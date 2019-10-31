@@ -44,7 +44,7 @@ nav
       a
         display: block
         position: relative
-        color: $black
+        color: $grey
         font-weight: bold
         font-size: 1.5rem
         transition: .25s
@@ -129,7 +129,7 @@ main
   width: 100%
   margin-top: -385px
   .activity
-    padding-top: 409px
+    padding-top: 400px
     background: transparent url('../images/activity-top-bg.png') center top no-repeat
     background-size: 2000px auto
     color: #fff
@@ -205,7 +205,7 @@ main
         top: 0
         z-index: 2
         height: 100%
-        background: transparent url('../images/floor.png') center 85% no-repeat
+        background: transparent url('../images/floor.png') center calc(100% * 3) no-repeat
         background-size: 2000px auto
       &::after
         top: 166px
@@ -213,7 +213,7 @@ main
         height: calc(100% - 166px)
         background-color: $green
       .light
-        top: -175px
+        top: -163px
         height: 160px
       h3
         margin-bottom: 48px
@@ -223,17 +223,17 @@ main
         padding-bottom: 200px
         margin-top: -166px
       .activity-info
-        max-width: 678px
+        max-width: 681px
     #seminar
       position: relative
       z-index: 3
-      padding-top: 215px
+      padding-top: 132px
       padding-bottom: 207px
       background: $green url('../images/floor2.png') center bottom no-repeat
       background-size: 2000px auto
       .light
         top: 0
-        height: 160px
+        height: 140px
       .slogan
         margin: 28px 0 35px
         font-size: 2.25rem
@@ -391,8 +391,12 @@ main
   .partner
     background: url('../images/white_wall.png') center center repeat
     background-size: 800px 600px
+    .wrap
+      max-width: 1200px
+      margin: 0 auto
     .content
       padding-top: 76px
+      padding-bottom: 56px
     h3
       max-width: 240px
       padding-bottom: 18px
@@ -404,6 +408,28 @@ main
       font-size: 1.75rem
       @include breakpoint($sm-up)
         font-size: 3.75rem
+    .partner-list
+      text-align: center
+      &:not(:last-of-type)
+        margin-bottom: 35px
+
+    h4 
+      margin-bottom: 25px
+      color: $black
+      font-size: 1.5rem
+    img 
+      max-width: 100%
+    ul 
+      font-size: 0
+      li 
+        display: inline-block
+        max-width: 123px
+        &:not(:last-child)
+          margin-right: 35px
+        a 
+          display: block
+
+
 
 footer
   padding: 30px 0
