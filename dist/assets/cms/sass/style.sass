@@ -9,6 +9,9 @@
 @import variable
 @import mixin
 
+//*
+//    border: solid 1px #000
+
 .go-top
   position: fixed
   right: 32px
@@ -30,30 +33,79 @@
 header
   position: relative
   z-index: 9
-  width: 100%
   @include breakpoint($sm-up)
     position: relative
 
+
+
 .header-wrap
-  padding: 0
+  width: 100%
+
 
 nav
   position: fixed
   top: 0
   left: 0
-  z-index: 11
+  z-index: 50
   width: 100%
-  height: 100px
+  height: 60px
   background-color: #fff
   border-bottom: 1px solid #eee
+  .btn-menu
+    position: relative
+    float: right
+    width: 44px
+    height: 44px
+    padding: 0
+    margin-top: 4px
+    background-color: #FFF
+    transition: .3s ease-in-out
+    cursor: pointer
+    border: none
+    margin-right: 20px
+    z-index: 51
+    &:hover,&:active
+      .line
+        background-color: $green
+    .line
+      position: absolute
+      left: 50%
+      top: 50%
+      width: 28px
+      height: 4px
+      border-radius: 4px
+      background-color: $green
+      transform:  translateX(-50%) translateY(-50%)
+      transition: .25s ease-in-out
+    .line1
+      transform:  translateX(-50%) translateY(8px)
+    .line2
+      transform:  translateX(-50%)
+    .line3
+      transform:  translateX(-50%) translateY(-8px)
+    &.opened
+      .line1
+        transform:  translateX(-50%) translateY(0px) rotate(45deg)
+      .line2
+        display: none
+      .line3
+        transform:  translateX(-50%) translateY(0px) rotate(-45deg)
+
   .menu-list
+    background-color: #fff
+    display: none
+    position: relative
+    width: 100%
+    height: calc(100vh - 40px)
     max-width: 1200px
-    margin: 0 auto
+    overflow-y: scroll
+    padding: 60px 0 20px 0
   ul
     padding: 0
     font-size: 0
     text-align: center
     li
+      padding: 10px 20px
       p,a
         display: block
         position: relative
@@ -79,13 +131,30 @@ nav
             height: 10px
       &.sns-btn
         a
+          display: inline-block
+          text-align: left
+          margin-right: 20px
+          &:last-of-type
+            margin-right: 0
           &::after
             content: none
   @include breakpoint($sm-up)
+    height: 100px
+    padding: 0 40px
+    .btn-menu
+      margin-right: 40px
+    .menu-list
+      display: block
+      overflow-y: hidden
+      height: auto
+      background: none
+      margin: 0 auto
+      padding: 0
     ul
       li
         display: inline-block
         text-align: center
+        padding: 0
         &:not(:first-child)
           margin-left: 48px
         &.sns-btn
@@ -95,13 +164,15 @@ nav
               vertical-align: -8px
         p,a
           font-size: 1.5rem
-          line-height: 100px
+          line-height: 90px
+  @include breakpoint($md-up)
+    padding: 0
 
 .header-content
   position: relative
   width: 100%
   height: 1440px
-  margin-top: 100px
+  margin-top: 56px
   &::after
     display: block
     content: ''
@@ -133,6 +204,8 @@ nav
     margin: 0 auto
     img
       width: 100%
+  @include breakpoint($sm-up)
+    margin-top: 100px
 
 /**
  **
