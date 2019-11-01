@@ -514,10 +514,11 @@ main
       padding-bottom: 18px
       margin: 0 auto 76px
       background: transparent url('../images/line01.png') center bottom no-repeat
-      background-size: 100% auto
+      background-size: 100% 8px
       color: $green
       font-weight: bold
       font-size: 2.5rem
+      text-align: center
       @include breakpoint($sm-up)
         font-size: 3.75rem
     ul
@@ -531,8 +532,9 @@ main
       -ms-flex-wrap: wrap
       @include clearfix()
       li
-        width: calc(100% / 3)
+        width: 100%
         margin-bottom: 32px
+        padding: 0 20px
         .video-content
           width: 318px
           height: 300px
@@ -540,8 +542,16 @@ main
           background: url('../images/video-border.png') center center no-repeat
           background-size: 318px 300px
           text-align: center
+          margin: 0 auto
           iframe
             max-width: 232px
+        @include breakpoint($sm-up)
+          width: calc(100% / 2)
+          padding: 0
+        @include breakpoint($md-up)
+          width: calc(100% / 3)
+          padding: 0
+
   .gallary
     background: $background
     .content

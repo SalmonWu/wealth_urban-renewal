@@ -751,10 +751,11 @@ main .playlist h3 {
   padding-bottom: 18px;
   margin: 0 auto 76px;
   background: transparent url("../images/line01.png") center bottom no-repeat;
-  background-size: 100% auto;
+  background-size: 100% 8px;
   color: #00a29a;
   font-weight: bold;
   font-size: 2.5rem;
+  text-align: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -781,8 +782,9 @@ main .playlist ul::after {
 }
 
 main .playlist ul li {
-  width: calc(100% / 3);
+  width: 100%;
   margin-bottom: 32px;
+  padding: 0 20px;
 }
 
 main .playlist ul li .video-content {
@@ -792,10 +794,25 @@ main .playlist ul li .video-content {
   background: url("../images/video-border.png") center center no-repeat;
   background-size: 318px 300px;
   text-align: center;
+  margin: 0 auto;
 }
 
 main .playlist ul li .video-content iframe {
   max-width: 232px;
+}
+
+@media screen and (min-width: 768px) {
+  main .playlist ul li {
+    width: calc(100% / 2);
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  main .playlist ul li {
+    width: calc(100% / 3);
+    padding: 0;
+  }
 }
 
 main .gallary {
