@@ -16,16 +16,16 @@ $(function () {
     // nav 按鈕
     $('.btn-menu').on('click', function () {
         if (!$(this).hasClass('opened')) {
-            $('.menu-list').css('display', 'block');
+            $('.menu-list').addClass('opened');
             $(this).addClass('opened');
         } else {
-            $('.menu-list').css('display', 'none');
+            $('.menu-list').removeClass('opened');
             $(this).removeClass('opened');
         }
     });
 
     $('.menu-list').on('click', function () {
-        $('.menu-list').css('display', 'none');
+        $('.menu-list').removeClass('opened');
         $('.btn-menu').removeClass('opened');
     });
 
@@ -40,10 +40,10 @@ $(function () {
             //== resize function START====
             // console.log($(window).innerWidth());
             if ($(window).innerWidth() < 768) {
-                $('.menu-list').css('display', 'none');
+                $('.menu-list').removeClass('opened');
                 $('.btn-menu').removeClass('opened');
             } else {
-                $('.menu-list').css('display', 'block');
+                $('.menu-list').addClass('opened');
             }
             //== resize function END====
 
