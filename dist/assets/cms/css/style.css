@@ -995,13 +995,14 @@ footer {
 }
 
 .modal .modal-header img {
-  margin-right: 48px;
+  margin-right: 24px;
+  width: 50px;
 }
 
 .modal .modal-header h5 {
   color: #00a29a;
   font-weight: bold;
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 .modal .modal-header .subtitle {
@@ -1035,27 +1036,57 @@ footer {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .modal .modal-header img {
+    width: auto;
+    margin-right: 48px;
+  }
+  .modal .modal-header h5 {
+    font-size: 3rem;
+  }
+}
+
+.modal .modal-body {
+  padding: 0;
+}
+
 .modal .modal-body .time-line {
-  padding-left: 72px;
+  padding-left: 16px;
   padding-bottom: 112px;
+}
+
+@media screen and (min-width: 768px) {
+  .modal .modal-body .time-line {
+    padding-left: 72px;
+  }
 }
 
 .modal .modal-body .time-line .items {
   position: relative;
+  font-size: 0;
 }
 
 .modal .modal-body .time-line .items .time {
   display: inline-block;
-  width: 163px;
-  padding-right: 32px;
+  width: 38%;
   color: #00a29a;
-  font-size: 1.5rem;
+  font-size: 1.125rem;
   vertical-align: top;
+  word-break: break-all;
+}
+
+@media screen and (min-width: 768px) {
+  .modal .modal-body .time-line .items .time {
+    width: 175px;
+    padding-right: 32px;
+    font-size: 1.5rem;
+  }
 }
 
 .modal .modal-body .time-line .items .list {
   display: inline-block;
   position: relative;
+  width: 62%;
   padding-left: 32px;
 }
 
@@ -1082,6 +1113,12 @@ footer {
   background-color: #00a29a;
 }
 
+@media screen and (min-width: 768px) {
+  .modal .modal-body .time-line .items .list {
+    width: auto;
+  }
+}
+
 .modal .modal-body .time-line .items:last-child .list::after {
   content: none;
 }
@@ -1098,11 +1135,18 @@ footer {
 .modal .modal-body .time-line ol li {
   padding-bottom: 32px;
   color: #666;
-  font-size: 1.5rem;
+  font-size: 1.125rem;
 }
 
 .modal .modal-body .time-line ol li.title {
   color: #000;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 768px) {
+  .modal .modal-body .time-line ol li {
+    font-size: 1.5rem;
+  }
 }
 
 #activityModal .modal-body {
