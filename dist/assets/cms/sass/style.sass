@@ -9,8 +9,8 @@
 @import variable
 @import mixin
 
-*
-    border: solid 1px #000
+//*
+//    border: solid 1px #000
 
 .go-top
   position: fixed
@@ -431,15 +431,13 @@ main
         position: relative
         float: left
         overflow: hidden
-        width: calc(100% - 40px)
+        width: 100%
         height: auto
         padding: 50% 0 0 0
-        margin: 10px 20px
+        margin: 0
         @include breakpoint($sm-up)
           width: calc(100% / 3)
-          height: auto
           padding: 20% 0 0 0
-          margin: 0
         &.pic01
           background: url('../images/pic01.jpg') center center no-repeat
           background-size: cover
