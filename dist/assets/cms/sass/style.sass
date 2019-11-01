@@ -142,8 +142,10 @@ nav
       &.sns-btn
         a
           display: inline-block
-          text-align: left
+          width: 39px 
+          height: 38px
           margin-right: 20px
+          text-align: left
           &:last-of-type
             margin-right: 0
           &::after
@@ -689,8 +691,6 @@ footer
       color: $green
       font-weight: bold
       font-size: 2.5rem
-      @include breakpoint($sm-up)
-        font-size: 3rem
     .subtitle
       flex: 1 0 100%
       -ms-flex: 1 0 100%
@@ -716,23 +716,37 @@ footer
         font-size: 1.5rem
       @include breakpoint($lg-up)
         right: -36px
-
+    @include breakpoint($sm-up)
+      img
+        width: auto
+        margin-right: 48px
+      h5
+        font-size: 3rem
   .modal-body 
+    padding: 0
     .time-line
-      padding-left: 72px
+      padding-left: 16px
       padding-bottom: 112px
+      @include breakpoint($sm-up)
+        padding-left: 72px
       .items
         position: relative
+        font-size: 0
         .time
           display: inline-block
-          width: 163px
-          padding-right: 32px
+          width: 38%
           color: $green
-          font-size: 1.5rem
+          font-size: 1.125rem
           vertical-align: top
+          word-break: break-all
+          @include breakpoint($sm-up)
+            width: 175px
+            padding-right: 32px
+            font-size: 1.5rem
         .list
           display: inline-block
           position: relative
+          width: 62%
           padding-left: 32px
           &::before, &::after
             display: block
@@ -751,6 +765,8 @@ footer
             width: 1px
             height: 100%
             background-color: $green
+          @include breakpoint($sm-up)
+            width: auto          
         &:last-child
           .list
             &::after
@@ -764,9 +780,12 @@ footer
         li 
           padding-bottom: 32px
           color: $grey
-          font-size: 1.5rem
+          font-size: 1.125rem
           &.title 
             color: $black
+            font-weight: bold
+          @include breakpoint($sm-up)
+            font-size: 1.5rem
 
 #activityModal
   .modal-body
