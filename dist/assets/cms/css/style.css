@@ -211,16 +211,16 @@ nav ul li.sns-btn a::after {
     padding: 0;
   }
   nav ul li:not(:first-child) {
-    margin-left: 48px;
+    margin-left: 16px;
   }
   nav ul li.sns-btn {
-    margin-left: 40px;
+    margin-left: 14px;
   }
   nav ul li.sns-btn .fb img {
     vertical-align: -8px;
   }
   nav ul li p, nav ul li a {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     line-height: 90px;
   }
 }
@@ -228,6 +228,12 @@ nav ul li.sns-btn a::after {
 @media screen and (min-width: 1280px) {
   nav {
     padding: 0;
+  }
+  nav ul li:not(:first-child) {
+    margin-left: 48px;
+  }
+  nav ul li p, nav ul li a {
+    font-size: 1.5rem;
   }
 }
 
@@ -493,17 +499,26 @@ main .about-renewal .content {
 main .about-renewal h3 {
   max-width: 420px;
   padding-bottom: 18px;
-  margin: 0 auto 72px;
+  margin: 0 20px 72px;
   background: transparent url("../images/line02.png") center bottom no-repeat;
   background-size: 100% auto;
   color: #00a29a;
   font-weight: bold;
   font-size: 1.75rem;
+  text-align: center;
 }
 
 @media screen and (min-width: 768px) {
   main .about-renewal h3 {
     font-size: 3.75rem;
+    margin: 0 40px 72px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  main .about-renewal h3 {
+    font-size: 3.75rem;
+    margin: 0 auto 72px;
   }
 }
 
