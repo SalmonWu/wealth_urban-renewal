@@ -753,10 +753,11 @@ main .playlist h3 {
   padding-bottom: 18px;
   margin: 0 auto 76px;
   background: transparent url("../images/line01.png") center bottom no-repeat;
-  background-size: 100% auto;
+  background-size: 100% 8px;
   color: #00a29a;
   font-weight: bold;
   font-size: 2.5rem;
+  text-align: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -783,8 +784,9 @@ main .playlist ul::after {
 }
 
 main .playlist ul li {
-  width: calc(100% / 3);
+  width: 100%;
   margin-bottom: 32px;
+  padding: 0 20px;
 }
 
 main .playlist ul li .video-content {
@@ -794,10 +796,25 @@ main .playlist ul li .video-content {
   background: url("../images/video-border.png") center center no-repeat;
   background-size: 318px 300px;
   text-align: center;
+  margin: 0 auto;
 }
 
 main .playlist ul li .video-content iframe {
   max-width: 232px;
+}
+
+@media screen and (min-width: 768px) {
+  main .playlist ul li {
+    width: calc(100% / 2);
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  main .playlist ul li {
+    width: calc(100% / 3);
+    padding: 0;
+  }
 }
 
 main .gallary {
@@ -998,7 +1015,14 @@ footer {
 
 .modal .modal-header img {
   margin-right: 24px;
-  width: 50px;
+  width: 44px;
+}
+
+@media screen and (min-width: 768px) {
+  .modal .modal-header img {
+    margin-right: 48px;
+    width: 63px;
+  }
 }
 
 .modal .modal-header h5 {
@@ -1007,13 +1031,26 @@ footer {
   font-size: 2.5rem;
 }
 
+@media screen and (min-width: 768px) {
+  .modal .modal-header h5 {
+    font-size: 3rem;
+  }
+}
+
 .modal .modal-header .subtitle {
   flex: 1 0 100%;
   -ms-flex: 1 0 100%;
   padding-top: 32px;
   color: #666;
-  font-size: 1.875rem;
+  font-size: 1.25rem;
   text-align: center;
+  color: #030000;
+}
+
+@media screen and (min-width: 768px) {
+  .modal .modal-header .subtitle {
+    font-size: 1.5rem;
+  }
 }
 
 .modal .modal-header .close {
@@ -1032,7 +1069,7 @@ footer {
   font-size: 1.5rem;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1280px) {
   .modal .modal-header .close {
     right: -36px;
   }
@@ -1158,17 +1195,17 @@ footer {
   -ms-flex-pack: justify;
   flex-wrap: wrap;
   -ms-flex-wrap: wrap;
-  padding: 0 72px 104px;
+  padding: 0 20px 104px;
 }
 
 #activityModal figure {
-  width: calc((100% - 40px) / 2);
+  width: 100%;
   max-width: 400px;
-  margin-bottom: 48px;
+  margin: 0 auto 48px;
 }
 
 #activityModal figure:nth-last-of-type(1), #activityModal figure:nth-last-of-type(2) {
-  margin-bottom: 0;
+  margin-bottom: 48px;
 }
 
 #activityModal figure img {
@@ -1177,29 +1214,44 @@ footer {
 
 #activityModal figure figcaption {
   padding-top: 24px;
-  color: #666;
-  font-size: 1.875rem;
+  color: #595757;
+  font-size: 1.75rem;
   text-align: center;
 }
 
+@media screen and (min-width: 768px) {
+  #activityModal .modal-body {
+    padding: 0 72px 104px;
+  }
+  #activityModal .modal-body figure {
+    width: calc((100% - 40px) / 2);
+  }
+  #activityModal .modal-body figure:nth-last-of-type(1), #activityModal .modal-body figure:nth-last-of-type(2) {
+    margin-bottom: 0;
+  }
+  #activityModal .modal-body figure figcaption {
+    font-size: 1.875rem;
+  }
+}
+
 #guestModal .modal-body {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   display: -ms-flexbox;
-  justify-content: flex-start;
   -ms-flex-pack: start;
   flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   max-width: 840px;
   padding: 0 0 64px;
-  margin: 0 auto;
+  justify-content: center;
+  margin-right: -32px;
 }
 
 #guestModal figure {
   width: 186px;
   margin-bottom: 32px;
-}
-
-#guestModal figure:not(:nth-of-type(4n)) {
   margin-right: 32px;
 }
 
@@ -1233,7 +1285,13 @@ footer {
 }
 
 #lotteryModal .modal-body {
-  padding: 0 56px 64px;
+  padding: 0 0 64px;
+}
+
+@media screen and (min-width: 768px) {
+  #lotteryModal .modal-body .modal-body {
+    padding: 0 56px 64px;
+  }
 }
 
 #lotteryModal .content {
@@ -1243,7 +1301,7 @@ footer {
 #lotteryModal .content .title {
   margin-bottom: 16px;
   color: #000;
-  font-size: 2.25rem;
+  font-size: 1.5rem;
   line-height: normal;
 }
 
@@ -1256,8 +1314,12 @@ footer {
 
 #lotteryModal .content p {
   color: #666;
-  font-size: 1.875rem;
-  line-height: 48px;
+  font-size: 1.25rem;
+  line-height: 28px;
+}
+
+#lotteryModal .content p .ps {
+  font-size: 1rem;
 }
 
 #lotteryModal .content .award {
@@ -1277,11 +1339,11 @@ footer {
   -ms-flex-pack: center;
   align-items: center;
   -ms-flex-align: center;
-  float: left;
   width: 270px;
   height: 270px;
   border: 5px solid #00a29a;
   text-align: center;
+  margin: 0 auto 20px auto;
 }
 
 #lotteryModal .content .award li img {
@@ -1289,7 +1351,28 @@ footer {
 }
 
 #lotteryModal .content .award li:not(:nth-child(3n)) {
-  margin-right: 37px;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 768px) {
+  #lotteryModal .content .title {
+    font-size: 2.25rem;
+  }
+  #lotteryModal .content p {
+    font-size: 1.875rem;
+    line-height: 48px;
+  }
+  #lotteryModal .content p .ps {
+    font-size: 1.25rem;
+  }
+  #lotteryModal .content .award li {
+    float: left;
+    margin: 0;
+  }
+  #lotteryModal .content .award li:not(:nth-child(3n)) {
+    margin-right: 37px;
+    margin-bottom: 37px;
+  }
 }
 
 @keyframes jump {
