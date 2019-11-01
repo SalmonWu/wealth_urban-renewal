@@ -442,14 +442,16 @@ main
       li
         position: relative
         float: left
-        overflow: hidden
+        overflow: visible
         width: 100%
         height: auto
         padding: 66% 0 0 0
-        margin: 0
+        margin: 0 0 120px 0
         @include breakpoint($sm-up)
           width: calc(100% / 2)
           padding: 33% 0 0 0
+          margin: 0
+          overflow: hidden
         @include breakpoint($md-up)
           width: calc(100% / 3)
           padding: 20% 0 0 0
@@ -478,30 +480,44 @@ main
           -ms-flex-pack: center
           align-items: center
           -ms-flex-align: center
-          position: absolute
-          bottom: 0
-          left: 0
+          position: relative
           width: 100%
-          height: 0
-          background-color: rgba(243, 151, 0, .8)
-          opacity: 0
-          color: #000
+          height: 90px
+          opacity: 1
+          color: $grey
           font-weight: bold
-          font-size: 1.625rem
+          font-size: 1.25rem
           text-align: center
           transition: .3s
+          top: 90px
           span
             display: block
             position: relative
-            padding-top: 93px
-            background: url('../images/house-icon.png') center top no-repeat
-            background-size: 77px 63px
+            background: url('../images/house-icon-S.svg') left top no-repeat
+            background-size: 30px 26px
+            padding-left: 40px
+            margin: 0 20px
           @include breakpoint($sm-up)
+            position: absolute
+            bottom: 0
+            left: 0
+            height: 0
             font-size: 1.625rem
-        &:hover
-          a
-            height: 100%
-            opacity: 1
+            opacity: 0
+            color: #000
+            background-color: rgba(243, 151, 0, .8)
+            span
+              display: block
+              position: relative
+              padding-top: 93px
+              padding-left: 0
+              background: url('../images/house-icon-L.svg') center top no-repeat
+              background-size: 77px 63px
+              margin: 0
+            &:hover
+              a
+                height: 100%
+                opacity: 1
   .playlist
     background: url('../images/brickwall.png') center center repeat
     background-size: 220px 138px

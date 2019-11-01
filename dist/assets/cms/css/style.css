@@ -198,8 +198,8 @@ nav ul li.sns-btn a {
   display: inline-block;
   width: 39px;
   height: 38px;
-  text-align: left;
   margin-right: 20px;
+  text-align: left;
 }
 
 nav ul li.sns-btn a:last-of-type {
@@ -642,17 +642,19 @@ main .about-renewal ul::after {
 main .about-renewal ul li {
   position: relative;
   float: left;
-  overflow: hidden;
+  overflow: visible;
   width: 100%;
   height: auto;
   padding: 66% 0 0 0;
-  margin: 0;
+  margin: 0 0 120px 0;
 }
 
 @media screen and (min-width: 768px) {
   main .about-renewal ul li {
     width: calc(100% / 2);
     padding: 33% 0 0 0;
+    margin: 0;
+    overflow: hidden;
   }
 }
 
@@ -700,37 +702,51 @@ main .about-renewal ul li a {
   -ms-flex-pack: center;
   align-items: center;
   -ms-flex-align: center;
-  position: absolute;
-  bottom: 0;
-  left: 0;
+  position: relative;
   width: 100%;
-  height: 0;
-  background-color: rgba(243, 151, 0, 0.8);
-  opacity: 0;
-  color: #000;
+  height: 90px;
+  opacity: 1;
+  color: #666;
   font-weight: bold;
-  font-size: 1.625rem;
+  font-size: 1.25rem;
   text-align: center;
   transition: .3s;
+  top: 90px;
 }
 
 main .about-renewal ul li a span {
   display: block;
   position: relative;
-  padding-top: 93px;
-  background: url("../images/house-icon.png") center top no-repeat;
-  background-size: 77px 63px;
+  background: url("../images/house-icon-S.svg") left top no-repeat;
+  background-size: 30px 26px;
+  padding-left: 40px;
+  margin: 0 20px;
 }
 
 @media screen and (min-width: 768px) {
   main .about-renewal ul li a {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 0;
     font-size: 1.625rem;
+    opacity: 0;
+    color: #000;
+    background-color: rgba(243, 151, 0, 0.8);
   }
-}
-
-main .about-renewal ul li:hover a {
-  height: 100%;
-  opacity: 1;
+  main .about-renewal ul li a span {
+    display: block;
+    position: relative;
+    padding-top: 93px;
+    padding-left: 0;
+    background: url("../images/house-icon-L.svg") center top no-repeat;
+    background-size: 77px 63px;
+    margin: 0;
+  }
+  main .about-renewal ul li a:hover a {
+    height: 100%;
+    opacity: 1;
+  }
 }
 
 main .playlist {
@@ -1029,12 +1045,6 @@ footer {
   color: #00a29a;
   font-weight: bold;
   font-size: 2.5rem;
-}
-
-@media screen and (min-width: 768px) {
-  .modal .modal-header h5 {
-    font-size: 3rem;
-  }
 }
 
 .modal .modal-header .subtitle {
