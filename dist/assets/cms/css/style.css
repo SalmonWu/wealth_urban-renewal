@@ -240,7 +240,7 @@ nav ul li.sns-btn a::after {
 .header-content {
   position: relative;
   width: 100%;
-  height: 1440px;
+  height: calc(100vh + 480px);
   margin-top: 56px;
 }
 
@@ -254,12 +254,12 @@ nav ul li.sns-btn a::after {
   width: 100%;
   height: 100%;
   background: #fafafb url("../images/main-banner.jpg") center bottom no-repeat;
-  background-size: auto 1172px;
+  background-size: auto 1000px;
 }
 
 .header-content .main-title {
   position: absolute;
-  top: 100px;
+  top: 56px;
   left: 0;
   z-index: 2;
   max-width: 595px;
@@ -300,12 +300,22 @@ nav ul li.sns-btn a::after {
   }
 }
 
-@media screen and (min-width: 768px) {
-  .header-content {
-    margin-top: 100px;
-  }
+@media screen and (min-width: 565px) {
   .header-content .main-title {
     left: calc(50% - 297.5px);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header-content {
+    height: 1440px;
+    margin-top: 100px;
+  }
+  .header-content::after {
+    background-size: auto 1172px;
+  }
+  .header-content .main-title {
+    top: 100px;
     padding: 0;
   }
   .header-content h1 {
@@ -336,7 +346,7 @@ main .activity {
   background: transparent url("../images/activity-top-bg.png") center top no-repeat;
   background-size: 2000px auto;
   color: #fff;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
 }
 
 main .activity::after {
@@ -351,6 +361,12 @@ main .activity::after {
   background-color: #00a29a;
 }
 
+@media screen and (min-width: 768px) {
+  main .activity {
+    font-size: 1.25rem;
+  }
+}
+
 main .activity .wrap {
   position: relative;
 }
@@ -358,7 +374,14 @@ main .activity .wrap {
 main .activity .content {
   width: 100%;
   max-width: 1200px;
+  padding: 0 16px;
   margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  main .activity .content {
+    padding: 0;
+  }
 }
 
 main .activity .light {
@@ -371,17 +394,19 @@ main .activity .light {
 }
 
 main .activity h3 {
-  max-width: 180px;
+  max-width: 122px;
   padding-bottom: 18px;
   margin: 0 auto;
   background: transparent url("../images/line01.png") center bottom no-repeat;
   background-size: 100% auto;
   font-weight: bold;
-  font-size: 1.75rem;
+  font-size: 2.5rem;
+  text-align: center;
 }
 
 @media screen and (min-width: 768px) {
   main .activity h3 {
+    max-width: 180px;
     font-size: 3.75rem;
   }
 }
@@ -395,13 +420,21 @@ main .activity p.caption {
   text-align: center;
 }
 
+main .activity p.caption br {
+  display: none;
+}
+
+main .activity p.caption .br-xs-block {
+  display: block;
+}
+
 main .activity p .tag {
   display: inline-block;
-  width: 80px;
-  margin-right: 24px;
+  width: 60px;
+  margin-right: 12px;
   border: 1px solid #fff;
-  border-radius: 21.5px;
-  line-height: 43px;
+  border-radius: 16px;
+  line-height: 32px;
   text-align: center;
 }
 
@@ -410,6 +443,18 @@ main .activity p .map-icon {
   margin-left: 12px;
   animation: jump .5s infinite alternate;
   vertical-align: 3px;
+}
+
+@media screen and (min-width: 768px) {
+  main .activity p.caption br {
+    display: block;
+  }
+  main .activity p .tag {
+    width: 80px;
+    margin-right: 24px;
+    border-radius: 21.5px;
+    line-height: 43px;
+  }
 }
 
 main .activity .activity-info {
@@ -423,21 +468,35 @@ main .activity .info-list {
 
 main .activity .info-list a {
   display: inline-block;
-  width: 230px;
+  width: calc((100% - 24px) /2);
+  margin-bottom: 24px;
   border-radius: 32.5px;
   background-color: #f39700;
   color: #fff;
   font-size: 1.25rem;
-  line-height: 65px;
+  line-height: 56px;
   transition: .25s;
 }
 
-main .activity .info-list a:not(:last-of-type) {
-  margin-right: 38px;
+main .activity .info-list a:not(:nth-child(2n)) {
+  margin-right: 24px;
 }
 
 main .activity .info-list a:hover {
   background-color: #ffb209;
+}
+
+@media screen and (min-width: 1024px) {
+  main .activity .info-list a {
+    width: 230px;
+    line-height: 65px;
+  }
+  main .activity .info-list a:not(:nth-child(2n)) {
+    margin-right: auto;
+  }
+  main .activity .info-list a:not(:last-of-type) {
+    margin-right: 32px;
+  }
 }
 
 main .activity #expo::before, main .activity #expo::after {
@@ -503,10 +562,17 @@ main .activity #seminar .light {
 }
 
 main .activity #seminar .slogan {
-  margin: 28px 0 35px;
-  font-size: 2.25rem;
+  margin: 16px 0 24px;
+  font-size: 1.5rem;
   font-weight: bold;
   text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  main .activity #seminar .slogan {
+    margin: 28px 0 35px;
+    font-size: 2.25rem;
+  }
 }
 
 main .activity #seminar .activity-info {
@@ -529,7 +595,7 @@ main .about-renewal h3 {
   background-size: 100% auto;
   color: #00a29a;
   font-weight: bold;
-  font-size: 1.75rem;
+  font-size: 2.5rem;
   text-align: center;
 }
 
@@ -648,7 +714,7 @@ main .playlist h3 {
   background-size: 100% auto;
   color: #00a29a;
   font-weight: bold;
-  font-size: 1.75rem;
+  font-size: 2.5rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -708,7 +774,7 @@ main .gallary h3 {
   background-size: 100% auto;
   color: #00a29a;
   font-weight: bold;
-  font-size: 1.75rem;
+  font-size: 2.5rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -772,7 +838,7 @@ main .partner h3 {
   background-size: 100% auto;
   color: #00a29a;
   font-weight: bold;
-  font-size: 1.75rem;
+  font-size: 2.5rem;
 }
 
 @media screen and (min-width: 768px) {
