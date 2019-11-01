@@ -26,15 +26,23 @@
   right: 32px;
   bottom: 56px;
   z-index: 11;
-  width: 95px;
-  height: 76px;
+  width: 44px;
+  height: 40px;
   background: url("../images/top-btn.png") center center no-repeat;
+  background-size: contain;
   opacity: 0;
   transition: .3s;
 }
 
 .go-top.show {
   opacity: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .go-top {
+    width: 95px;
+    height: 76px;
+  }
 }
 
 /**
@@ -600,13 +608,12 @@ main .about-renewal .content {
 
 main .about-renewal h3 {
   max-width: 280px;
-  padding: 0 20px 18px 20px;
+  padding: 0 0 18px 0;
   margin: 0 auto 72px;
   background: transparent url("../images/line02.png") center bottom no-repeat;
-  background-size: 100% auto;
   color: #00a29a;
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 2.5rem;
   text-align: center;
 }
 
@@ -636,11 +643,18 @@ main .about-renewal ul li {
   overflow: hidden;
   width: 100%;
   height: auto;
-  padding: 50% 0 0 0;
+  padding: 66% 0 0 0;
   margin: 0;
 }
 
 @media screen and (min-width: 768px) {
+  main .about-renewal ul li {
+    width: calc(100% / 2);
+    padding: 33% 0 0 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
   main .about-renewal ul li {
     width: calc(100% / 3);
     padding: 20% 0 0 0;
@@ -693,7 +707,7 @@ main .about-renewal ul li a {
   opacity: 0;
   color: #000;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 1.625rem;
   text-align: center;
   transition: .3s;
 }
@@ -793,18 +807,20 @@ main .gallary .content {
 }
 
 main .gallary h3 {
-  max-width: 240px;
+  max-width: 180px;
   padding-bottom: 18px;
   margin: 0 auto 40px;
   background: transparent url("../images/line01.png") center bottom no-repeat;
-  background-size: 100% auto;
+  background-size: 100% 8px;
   color: #00a29a;
   font-weight: bold;
   font-size: 2.5rem;
+  text-align: center;
 }
 
 @media screen and (min-width: 768px) {
   main .gallary h3 {
+    max-width: 240px;
     font-size: 3.75rem;
   }
 }
@@ -819,8 +835,24 @@ main .gallary ul li {
   position: relative;
   float: left;
   overflow: hidden;
-  width: calc(100% / 3);
-  padding-top: 20%;
+  width: 100%;
+  height: auto;
+  padding: 60% 0 0 0;
+  margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+  main .gallary ul li {
+    width: calc(100% / 2);
+    padding: 30% 0 0 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  main .gallary ul li {
+    width: calc(100% / 3);
+    padding: 20% 0 0 0;
+  }
 }
 
 main .gallary ul li span {
@@ -857,18 +889,20 @@ main .partner .content {
 }
 
 main .partner h3 {
-  max-width: 240px;
+  max-width: 180px;
   padding-bottom: 18px;
   margin: 0 auto 56px;
   background: transparent url("../images/line01.png") center bottom no-repeat;
-  background-size: 100% auto;
+  background-size: 100% 8px;
   color: #00a29a;
   font-weight: bold;
   font-size: 2.5rem;
+  text-align: center;
 }
 
 @media screen and (min-width: 768px) {
   main .partner h3 {
+    max-width: 240px;
     font-size: 3.75rem;
   }
 }
@@ -896,21 +930,26 @@ main .partner ul {
 }
 
 main .partner ul li {
-  display: inline-block;
+  display: block;
   max-width: 292px;
-  margin-bottom: 32px;
-}
-
-main .partner ul li:not(:last-child) {
-  margin-right: 35px;
-}
-
-main .partner ul li:nth-child(3n) {
-  margin-right: 0;
+  text-align: center;
+  margin: 0 auto 32px;
 }
 
 main .partner ul li a {
   display: block;
+}
+
+@media screen and (min-width: 768px) {
+  main .partner ul li {
+    display: inline-block;
+  }
+  main .partner ul li:not(:last-child) {
+    margin-right: 35px;
+  }
+  main .partner ul li:nth-child(3n) {
+    margin-right: 0;
+  }
 }
 
 footer {
