@@ -196,6 +196,8 @@ nav ul li p:hover::after, nav ul li p.active::after, nav ul li a:hover::after, n
 
 nav ul li.sns-btn a {
   display: inline-block;
+  width: 39px;
+  height: 38px;
   text-align: left;
   margin-right: 20px;
 }
