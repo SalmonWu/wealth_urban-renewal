@@ -589,13 +589,13 @@ main .about-renewal .content {
 
 main .about-renewal h3 {
   max-width: 280px;
-  padding: 0 20px 18px 20px;
+  padding: 0 0 18px 0;
   margin: 0 auto 72px;
   background: transparent url("../images/line02.png") center bottom no-repeat;
   background-size: 100% auto;
   color: #00a29a;
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 2.5rem;
   text-align: center;
 }
 
@@ -625,11 +625,18 @@ main .about-renewal ul li {
   overflow: hidden;
   width: 100%;
   height: auto;
-  padding: 50% 0 0 0;
+  padding: 66% 0 0 0;
   margin: 0;
 }
 
 @media screen and (min-width: 768px) {
+  main .about-renewal ul li {
+    width: calc(100% / 2);
+    padding: 33% 0 0 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
   main .about-renewal ul li {
     width: calc(100% / 3);
     padding: 20% 0 0 0;
@@ -682,7 +689,7 @@ main .about-renewal ul li a {
   opacity: 0;
   color: #000;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 1.625rem;
   text-align: center;
   transition: .3s;
 }
