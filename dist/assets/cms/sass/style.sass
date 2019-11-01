@@ -156,17 +156,23 @@ nav
         text-align: center
         padding: 0
         &:not(:first-child)
-          margin-left: 48px
+          margin-left: 16px
         &.sns-btn
-          margin-left: 40px
+          margin-left: 14px
           .fb
             img
               vertical-align: -8px
         p,a
-          font-size: 1.5rem
+          font-size: 1.25rem
           line-height: 90px
   @include breakpoint($md-up)
     padding: 0
+    ul
+      li
+        &:not(:first-child)
+          margin-left: 48px
+        p,a
+          font-size: 1.5rem
 
 .header-content
   position: relative
@@ -351,14 +357,19 @@ main
     h3
       max-width: 420px
       padding-bottom: 18px
-      margin: 0 auto 72px
+      margin: 0 20px 72px
       background: transparent url('../images/line02.png') center bottom no-repeat
       background-size: 100% auto
       color: $green
       font-weight: bold
       font-size: 1.75rem
+      text-align: center
       @include breakpoint($sm-up)
         font-size: 3.75rem
+        margin: 0 40px 72px
+      @include breakpoint($md-up)
+        font-size: 3.75rem
+        margin: 0 auto 72px
     ul
       @include clearfix()
       li
