@@ -174,27 +174,6 @@ nav ul li p, nav ul li a {
   transition: .25s;
 }
 
-nav ul li p::after, nav ul li a::after {
-  display: block;
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
-  width: 100%;
-  height: 0;
-  background-color: #00a29a;
-  transition: .25s;
-}
-
-nav ul li p:hover, nav ul li p.active, nav ul li a:hover, nav ul li a.active {
-  color: #00a29a;
-}
-
-nav ul li p:hover::after, nav ul li p.active::after, nav ul li a:hover::after, nav ul li a.active::after {
-  height: 10px;
-}
-
 nav ul li.sns-btn a {
   display: inline-block;
   width: 39px;
@@ -243,7 +222,25 @@ nav ul li.sns-btn a::after {
   }
   nav ul li p, nav ul li a {
     font-size: 1.25rem;
-    line-height: 90px;
+    line-height: 100px;
+  }
+  nav ul li p::after, nav ul li a::after {
+    display: block;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 0;
+    background-color: #00a29a;
+    transition: .25s;
+  }
+  nav ul li p:hover, nav ul li p.active, nav ul li a:hover, nav ul li a.active {
+    color: #00a29a;
+  }
+  nav ul li p:hover::after, nav ul li p.active::after, nav ul li a:hover::after, nav ul li a.active::after {
+    height: 10px;
   }
 }
 
@@ -284,6 +281,7 @@ nav ul li.sns-btn a::after {
   top: 56px;
   left: 0;
   z-index: 2;
+  width: 100%;
   max-width: 595px;
   padding: 0 16px;
   margin: 0 auto;
@@ -346,7 +344,6 @@ nav ul li.sns-btn a::after {
   .header-content h1 span {
     top: 0;
     right: 6px;
-    width: auto;
   }
 }
 
@@ -442,14 +439,6 @@ main .activity p.caption {
   text-align: center;
 }
 
-main .activity p.caption br {
-  display: none;
-}
-
-main .activity p.caption .br-xs-block {
-  display: block;
-}
-
 main .activity p .tag {
   display: inline-block;
   width: 60px;
@@ -468,9 +457,6 @@ main .activity p .map-icon {
 }
 
 @media screen and (min-width: 768px) {
-  main .activity p.caption br {
-    display: block;
-  }
   main .activity p .tag {
     width: 80px;
     margin-right: 24px;
@@ -562,7 +548,7 @@ main .activity #expo .content {
 }
 
 main .activity #expo .activity-info {
-  max-width: 681px;
+  max-width: 470px;
 }
 
 main .activity #seminar {
@@ -598,7 +584,7 @@ main .activity #seminar .slogan {
 }
 
 main .activity #seminar .activity-info {
-  max-width: 942px;
+  max-width: 660px;
 }
 
 main .about-renewal {
@@ -646,7 +632,7 @@ main .about-renewal ul li {
   overflow: visible;
   width: 100%;
   height: auto;
-  padding: 66% 0 0 0;
+  padding: 44% 0 0 0;
   margin: 0 0 120px 0;
 }
 
@@ -744,7 +730,12 @@ main .about-renewal ul li a span {
     background-size: 77px 63px;
     margin: 0;
   }
-  main .about-renewal ul li a:hover a {
+}
+
+@media screen and (min-width: 768px) {
+  main .about-renewal ul li:hover a {
+    top: auto;
+    bottom: 0;
     height: 100%;
     opacity: 1;
   }
@@ -993,8 +984,18 @@ footer {
   background-color: #00a29a;
   color: #fff;
   font-size: 0.8125rem;
-  line-height: 14px;
+  line-height: 26px;
   text-align: center;
+}
+
+footer .br-xs-block {
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  footer .br-xs-block {
+    display: none;
+  }
 }
 
 .modal .modal-dialog {
