@@ -28,6 +28,11 @@ html, body {
   font-size: 100%;
 }
 
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
 /**
  **
  ** =clear,clearfix
