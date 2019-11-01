@@ -8,9 +8,15 @@ $(function () {
     });
 
     $('.anchor').on('click', function () {
-        $('html, body').animate({
-            scrollTop: $($.attr(this, 'data-href')).offset().top - 100
-        }, 800);
+        if ($(window).width() <= 768) {
+            $('html, body').animate({
+                scrollTop: $($.attr(this, 'data-href')).offset().top - 60
+            }, 800);
+        } else {
+            $('html, body').animate({
+                scrollTop: $($.attr(this, 'data-href')).offset().top - 100
+            }, 800);
+        }
     })
 
     // nav 按鈕

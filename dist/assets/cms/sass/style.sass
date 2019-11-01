@@ -41,10 +41,8 @@ header
     position: relative
 
 
-
 .header-wrap
   width: 100%
-
 
 nav
   position: fixed
@@ -125,21 +123,6 @@ nav
         font-size: 1.5rem
         cursor: pointer
         transition: .25s
-        &::after
-          display: block
-          content: ''
-          position: absolute
-          bottom: 0
-          left: 0
-          z-index: 1
-          width: 100%
-          height: 0
-          background-color: $green
-          transition: .25s
-        &:hover, &.active
-          color: $green
-          &::after
-            height: 10px
       &.sns-btn
         a
           display: inline-block
@@ -177,7 +160,22 @@ nav
               vertical-align: -8px
         p,a
           font-size: 1.25rem
-          line-height: 90px
+          line-height: 100px
+          &::after
+            display: block
+            content: ''
+            position: absolute
+            bottom: 0
+            left: 0
+            z-index: 1
+            width: 100%
+            height: 0
+            background-color: $green
+            transition: .25s
+          &:hover, &.active
+            color: $green
+            &::after
+              height: 10px
   @include breakpoint($md-up)
     padding: 0
     ul
@@ -208,6 +206,7 @@ nav
     top: 56px
     left: 0
     z-index: 2
+    width: 100%
     max-width: 595px
     padding: 0 16px
     margin: 0 auto
@@ -247,7 +246,6 @@ nav
       span 
         top: 0
         right: 6px
-        width: auto
 
 /**
  **
@@ -312,10 +310,6 @@ main
       line-height: 42px
       &.caption
         text-align: center
-        br 
-          display: none
-        .br-xs-block
-          display: block
       .tag
         display: inline-block
         width: 60px
@@ -330,9 +324,6 @@ main
         animation: jump .5s infinite alternate
         vertical-align: 3px
       @include breakpoint($sm-up)
-        &.caption
-          br 
-            display: block
         .tag
           width: 80px
           margin-right: 24px
@@ -395,7 +386,7 @@ main
         padding-bottom: 200px
         margin-top: -144px
       .activity-info
-        max-width: 681px
+        max-width: 470px
     #seminar
       position: relative
       z-index: 3
@@ -417,7 +408,7 @@ main
           margin: 28px 0 35px
           font-size: 2.25rem
       .activity-info
-        max-width: 942px
+        max-width: 660px
   .about-renewal
     background: $background
     .content
@@ -446,7 +437,7 @@ main
         overflow: visible
         width: 100%
         height: auto
-        padding: 66% 0 0 0
+        padding: 44% 0 0 0
         margin: 0 0 120px 0
         @include breakpoint($sm-up)
           width: calc(100% / 2)
@@ -673,15 +664,18 @@ main
           &:nth-child(3n)
             margin-right: 0
 
-
 footer
   padding: 30px 0
   background-color: $green
   color: #fff
   font-size: 0.8125rem
-  line-height: 14px
+  line-height: 26px
   text-align: center
-  
+  .br-xs-block
+    display: block
+  @include breakpoint($sm-up)
+    .br-xs-block
+      display: none
 .modal 
   .modal-dialog
     max-width: 100%
