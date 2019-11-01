@@ -744,7 +744,12 @@ main .about-renewal ul li a span {
     background-size: 77px 63px;
     margin: 0;
   }
-  main .about-renewal ul li a:hover a {
+}
+
+@media screen and (min-width: 768px) {
+  main .about-renewal ul li:hover a {
+    top: auto;
+    bottom: 0;
     height: 100%;
     opacity: 1;
   }

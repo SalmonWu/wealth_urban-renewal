@@ -515,10 +515,14 @@ main
               background: url('../images/house-icon-L.svg') center top no-repeat
               background-size: 77px 63px
               margin: 0
-            &:hover
-              a
-                height: 100%
-                opacity: 1
+        @include breakpoint($sm-up)
+          &:hover
+            a
+              top: auto
+              bottom: 0
+              height: 100%
+              opacity: 1
+
   .playlist
     background: url('../images/brickwall.png') center center repeat
     background-size: 220px 138px
