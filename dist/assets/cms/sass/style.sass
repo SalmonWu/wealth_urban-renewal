@@ -651,6 +651,9 @@ footer
   .modal-content 
     border: 0
     border-radius: 0
+    padding: 0 20px
+    @include breakpoint($sm-up)
+      padding: 0 40px
   .modal-header 
     justify-content: center
     -ms-flex-pack: center
@@ -676,7 +679,7 @@ footer
     .close 
       position: absolute
       top: 16px
-      right: -36px
+      right: 16px
       width: 52px
       height: 52px 
       padding: 0
@@ -684,7 +687,10 @@ footer
       opacity: 1
       span 
         color: #fff
-        font-size: 1.5rem 
+        font-size: 1.5rem
+      @include breakpoint($md-up)
+        right: -36px
+
   .modal-body 
     .time-line
       padding-left: 72px

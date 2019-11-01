@@ -963,6 +963,13 @@ footer {
 .modal .modal-content {
   border: 0;
   border-radius: 0;
+  padding: 0 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .modal .modal-content {
+    padding: 0 40px;
+  }
 }
 
 .modal .modal-header {
@@ -998,7 +1005,7 @@ footer {
 .modal .modal-header .close {
   position: absolute;
   top: 16px;
-  right: -36px;
+  right: 16px;
   width: 52px;
   height: 52px;
   padding: 0;
@@ -1009,6 +1016,12 @@ footer {
 .modal .modal-header .close span {
   color: #fff;
   font-size: 1.5rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .modal .modal-header .close {
+    right: -36px;
+  }
 }
 
 .modal .modal-body .time-line {
