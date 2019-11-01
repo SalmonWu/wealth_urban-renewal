@@ -149,6 +149,7 @@ nav .menu-list.opened {
 
 @media screen and (min-width: 768px) {
   nav .menu-list {
+    transform: translateX(0);
     transition: none;
   }
 }
@@ -1260,9 +1261,29 @@ footer {
 }
 
 #guestModal figure {
-  width: 186px;
+  width: 100%;
   margin-bottom: 32px;
-  margin-right: 32px;
+}
+
+@media screen and (min-width: 768px) {
+  #guestModal figure {
+    width: calc((100% - 64px) /3);
+  }
+  #guestModal figure:not(:nth-of-type(3n)) {
+    margin-right: 32px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #guestModal figure {
+    width: 186px;
+  }
+  #guestModal figure:not(:nth-of-type(3n)) {
+    margin-right: auto;
+  }
+  #guestModal figure:not(:nth-of-type(4n)) {
+    margin-right: 32px;
+  }
 }
 
 #guestModal figure .media {
