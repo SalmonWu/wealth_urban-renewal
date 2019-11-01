@@ -21,6 +21,10 @@
  *----------------------------------------------------------------------------- */
 /* +Breakpoint
  **---------------------------------------------------------------------------- */
+* {
+  border: solid 1px #000;
+}
+
 .go-top {
   position: fixed;
   right: 32px;
@@ -497,28 +501,28 @@ main .about-renewal .content {
 }
 
 main .about-renewal h3 {
-  max-width: 420px;
-  padding-bottom: 18px;
-  margin: 0 20px 72px;
+  max-width: 280px;
+  padding: 0 20px 18px 20px;
+  margin: 0 auto 72px;
   background: transparent url("../images/line02.png") center bottom no-repeat;
   background-size: 100% auto;
   color: #00a29a;
   font-weight: bold;
-  font-size: 1.75rem;
+  font-size: 2rem;
   text-align: center;
 }
 
 @media screen and (min-width: 768px) {
   main .about-renewal h3 {
+    max-width: 440px;
     font-size: 3.75rem;
-    margin: 0 40px 72px;
+    padding: 0 0 18px 0;
   }
 }
 
 @media screen and (min-width: 1280px) {
   main .about-renewal h3 {
     font-size: 3.75rem;
-    margin: 0 auto 72px;
   }
 }
 
@@ -532,8 +536,19 @@ main .about-renewal ul li {
   position: relative;
   float: left;
   overflow: hidden;
-  width: calc(100% / 3);
-  padding-top: 20%;
+  width: calc(100% - 40px);
+  height: auto;
+  padding: 50% 0 0 0;
+  margin: 10px 20px;
+}
+
+@media screen and (min-width: 768px) {
+  main .about-renewal ul li {
+    width: calc(100% / 3);
+    height: auto;
+    padding: 20% 0 0 0;
+    margin: 0;
+  }
 }
 
 main .about-renewal ul li.pic01 {
@@ -582,7 +597,7 @@ main .about-renewal ul li a {
   opacity: 0;
   color: #000;
   font-weight: bold;
-  font-size: 1.625rem;
+  font-size: 1rem;
   text-align: center;
   transition: .3s;
 }
@@ -593,6 +608,12 @@ main .about-renewal ul li a span {
   padding-top: 93px;
   background: url("../images/house-icon.png") center top no-repeat;
   background-size: 77px 63px;
+}
+
+@media screen and (min-width: 768px) {
+  main .about-renewal ul li a {
+    font-size: 1.625rem;
+  }
 }
 
 main .about-renewal ul li:hover a {

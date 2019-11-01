@@ -9,8 +9,8 @@
 @import variable
 @import mixin
 
-//*
-//    border: solid 1px #000
+*
+    border: solid 1px #000
 
 .go-top
   position: fixed
@@ -355,29 +355,36 @@ main
     .content
       padding-top: 76px
     h3
-      max-width: 420px
-      padding-bottom: 18px
-      margin: 0 20px 72px
+      max-width: 280px
+      padding: 0 20px 18px 20px
+      margin: 0 auto 72px
       background: transparent url('../images/line02.png') center bottom no-repeat
       background-size: 100% auto
       color: $green
       font-weight: bold
-      font-size: 1.75rem
+      font-size: 2rem
       text-align: center
       @include breakpoint($sm-up)
+        max-width: 440px
         font-size: 3.75rem
-        margin: 0 40px 72px
+        padding: 0 0 18px 0
       @include breakpoint($md-up)
         font-size: 3.75rem
-        margin: 0 auto 72px
     ul
       @include clearfix()
       li
         position: relative
         float: left
         overflow: hidden
-        width: calc(100% / 3)
-        padding-top: 20%
+        width: calc(100% - 40px)
+        height: auto
+        padding: 50% 0 0 0
+        margin: 10px 20px
+        @include breakpoint($sm-up)
+          width: calc(100% / 3)
+          height: auto
+          padding: 20% 0 0 0
+          margin: 0
         &.pic01
           background: url('../images/pic01.jpg') center center no-repeat
           background-size: cover
@@ -412,7 +419,7 @@ main
           opacity: 0
           color: #000
           font-weight: bold
-          font-size: 1.625rem
+          font-size: 1rem
           text-align: center
           transition: .3s
           span
@@ -421,6 +428,8 @@ main
             padding-top: 93px
             background: url('../images/house-icon.png') center top no-repeat
             background-size: 77px 63px
+          @include breakpoint($sm-up)
+            font-size: 1.625rem
         &:hover
           a
             height: 100%
