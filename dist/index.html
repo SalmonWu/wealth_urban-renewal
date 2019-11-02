@@ -17,7 +17,7 @@
     <!-- Facebook og-->
     <meta property="og:site_name" content="〈第一屆〉危老都更博覽會 樂居好城市">
     <meta property="og:title" content="〈第一屆〉危老都更博覽會 樂居好城市">
-    <meta property="og:image" content="./assets/cms/images/fb-og.png">
+    <meta property="og:image" content="assets/cms/images/fb-og.png">
     <meta property="og:url" content="http://www.wealth.com.tw/safehouse1/">
     <meta property="og:description" content="危老都更博覽會：匯聚都市更新相關產業透過博覽會的舉辦，鼓勵民眾從都更及危老重建的思考角度出發、闔家參與，善用政府的危老都更政策，搭配營建業者提出的翻修或改建方案，讓家有更好的未來！">
     <meta property="og:type" content="website">
@@ -80,7 +80,30 @@
         <li>
           <p class="anchor" data-href="#partner">合作夥伴</p>
         </li>
-        <li class="sns-btn"><a class="fb" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fshuwei.wined.nctu.me%2Fhouse-renewal&amp;display=touch"><img src="assets/cms/images/fb-icon.svg"></a><a class="line d-inline-block d-sm-none" target="_blank" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Fshuwei.wined.nctu.me%2Fhouse-renewal"><img src="assets/cms/images/line-icon.svg"></a></li>
+        <li class="sns-btn"><a class="fb" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fshuwei.wined.nctu.me%2Fhouse-renewal&amp;display=touch"><img src="assets/cms/images/fb-icon.svg"></a>
+          <script>
+            //<![CDATA[
+            (function () {
+                var img = "assets/cms/images/line-icon.svg", // line 按鈕圖示
+                    title = "《" + document.title + "》",
+                    url = "http://www.wealth.com.tw/safehouse1/",
+                    href, html,
+                    text1 = "〈第一屆〉危老都更博覽會 樂居好城市";
+                text2 = "危老都更博覽會：匯聚都市更新相關產業透過博覽會的舉辦，鼓勵民眾從都更及危老重建的思考角度出發、闔家參與，善用政府的危老都更政策，搭配營建業者提出的翻修或改建方案，讓家有更好的未來！";
+            
+                // 行動裝置語法
+                if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                    href = "http://line.naver.jp/R/msg/text/?" + title + "%0D%0A" + url + "%0D%0A" + text1 + "%0D%0A" + text2;
+                } else {
+                    // 網頁版語法
+                    href = "https://lineit.line.me/share/ui?url=" + encodeURIComponent(url);
+                }
+                html = "<a href='" + href + "' target='_blank'><img src='" + img + "'/></a>";
+                document.write(html);
+            })();
+            //]]>
+          </script>
+        </li>
       </ul>
     </div>
   </nav>
@@ -223,9 +246,8 @@
   <!-- ============================== main close ===============================-->
   <!-- ============================== footer start =============================-->
   <footer> 
-    <div class="footer-wrap">本網站版權屬於財信雜誌社股份有限公司所有，<br class="br-xs-block">未經本站同意，不要擅用文字及圖案<br>服務專線：（02）2551-2561分機224〜226
-      本網站版權屬於財信雜誌社股份有限公司所有，
-      未經本站同意，不要擅用文字及圖案 服務專線：（02）2551-5228分機10〜12<span class="d-none d-sm-inline-block">&emsp;\&emsp;</span><br class="d-block d-sm-none">(02）2551-5228分機10〜12
+    <div class="footer-wrap">本網站版權屬於財信雜誌社股份有限公司所有，<br class="br-xs-block">未經本站同意，不要擅用文字及圖案<br>服務專線：
+      （02）2551-2561分機224〜226<span class="d-none d-sm-inline-block">&emsp;\&emsp;</span><br class="d-block d-sm-none">(02）2551-5228分機10〜12
     </div>
   </footer>
   <!-- ============================== footer close =============================-->
@@ -559,7 +581,7 @@
           </div>
           <div class="content">
             <p class="title">抽獎方式</p>
-            <p>凡參加活動並完成定通關任務，<br>就有機會抽中最新款智慧手機、智慧動能自行車、<br>九陽高速破璧冷熱調理機等好禮。<br><span class="ps">(抽獎聯於大會冊中，蓋滿章即可獲得抽獎機會乙次)</span></p>
+            <p>凡參加活動並完成定通關任務，<br>就有機會抽中最新款智慧手機、智慧動能自行車、<br>九陽高速破璧冷熱調理機等好禮。</p>
           </div>
           <!--.content-->
           <!--    p.title 獎項-->

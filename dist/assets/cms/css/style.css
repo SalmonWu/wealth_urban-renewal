@@ -177,8 +177,8 @@ nav ul li p, nav ul li a {
 
 nav ul li.sns-btn a {
   display: inline-block;
-  width: 39px;
-  height: 38px;
+  width: 60px;
+  height: 60px;
   margin-right: 20px;
   text-align: left;
 }
@@ -217,6 +217,10 @@ nav ul li.sns-btn a::after {
   }
   nav ul li.sns-btn {
     margin-left: 14px;
+  }
+  nav ul li.sns-btn .fb {
+    width: 39px;
+    height: 38px;
   }
   nav ul li.sns-btn .fb img {
     vertical-align: -8px;
