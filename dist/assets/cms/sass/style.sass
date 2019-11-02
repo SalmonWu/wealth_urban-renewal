@@ -114,7 +114,7 @@ nav
     padding: 0
     font-size: 0
     text-align: center
-    li
+    >li
       padding: 10px 20px
       p,a
         display: block
@@ -125,14 +125,20 @@ nav
         cursor: pointer
         transition: .25s
       &.sns-btn
+        ol
+          padding: 0
+          font-size: 0
+          text-align: center
+          li
+            display: inline-block
+            margin-right: 20px
+            text-align: left
+            &:last-of-type
+              margin-right: 0
         a
           display: inline-block
           width: 60px
           height: 60px
-          margin-right: 20px
-          text-align: left
-          &:last-of-type
-            margin-right: 0
           &::after
             content: none
   @include breakpoint($sm-up)
@@ -148,7 +154,7 @@ nav
       margin: 0 auto
       padding: 0
     ul
-      li
+      >li
         display: inline-block
         text-align: center
         padding: 0
@@ -160,7 +166,7 @@ nav
             width: 39px
             height: 38px
             img
-              vertical-align: -8px
+              vertical-align: -9px
         p,a
           font-size: 1.25rem
           line-height: 100px

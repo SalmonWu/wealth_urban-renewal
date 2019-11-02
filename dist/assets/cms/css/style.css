@@ -161,11 +161,11 @@ nav ul {
   text-align: center;
 }
 
-nav ul li {
+nav ul > li {
   padding: 10px 20px;
 }
 
-nav ul li p, nav ul li a {
+nav ul > li p, nav ul > li a {
   display: block;
   position: relative;
   color: #666;
@@ -175,19 +175,29 @@ nav ul li p, nav ul li a {
   transition: .25s;
 }
 
-nav ul li.sns-btn a {
+nav ul > li.sns-btn ol {
+  padding: 0;
+  font-size: 0;
+  text-align: center;
+}
+
+nav ul > li.sns-btn ol li {
   display: inline-block;
-  width: 60px;
-  height: 60px;
   margin-right: 20px;
   text-align: left;
 }
 
-nav ul li.sns-btn a:last-of-type {
+nav ul > li.sns-btn ol li:last-of-type {
   margin-right: 0;
 }
 
-nav ul li.sns-btn a::after {
+nav ul > li.sns-btn a {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+}
+
+nav ul > li.sns-btn a::after {
   content: none;
 }
 
@@ -207,29 +217,29 @@ nav ul li.sns-btn a::after {
     margin: 0 auto;
     padding: 0;
   }
-  nav ul li {
+  nav ul > li {
     display: inline-block;
     text-align: center;
     padding: 0;
   }
-  nav ul li:not(:first-child) {
+  nav ul > li:not(:first-child) {
     margin-left: 16px;
   }
-  nav ul li.sns-btn {
+  nav ul > li.sns-btn {
     margin-left: 14px;
   }
-  nav ul li.sns-btn .fb {
+  nav ul > li.sns-btn .fb {
     width: 39px;
     height: 38px;
   }
-  nav ul li.sns-btn .fb img {
-    vertical-align: -8px;
+  nav ul > li.sns-btn .fb img {
+    vertical-align: -9px;
   }
-  nav ul li p, nav ul li a {
+  nav ul > li p, nav ul > li a {
     font-size: 1.25rem;
     line-height: 100px;
   }
-  nav ul li p::after, nav ul li a::after {
+  nav ul > li p::after, nav ul > li a::after {
     display: block;
     content: '';
     position: absolute;
@@ -241,10 +251,10 @@ nav ul li.sns-btn a::after {
     background-color: #00a29a;
     transition: .25s;
   }
-  nav ul li p:hover, nav ul li p.active, nav ul li a:hover, nav ul li a.active {
+  nav ul > li p:hover, nav ul > li p.active, nav ul > li a:hover, nav ul > li a.active {
     color: #00a29a;
   }
-  nav ul li p:hover::after, nav ul li p.active::after, nav ul li a:hover::after, nav ul li a.active::after {
+  nav ul > li p:hover::after, nav ul > li p.active::after, nav ul > li a:hover::after, nav ul > li a.active::after {
     height: 10px;
   }
 }

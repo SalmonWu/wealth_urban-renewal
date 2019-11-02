@@ -80,29 +80,34 @@
         <li>
           <p class="anchor" data-href="#partner">合作夥伴</p>
         </li>
-        <li class="sns-btn"><a class="fb" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fshuwei.wined.nctu.me%2Fhouse-renewal&amp;display=touch"><img src="assets/cms/images/fb-icon.svg"></a>
-          <script>
-            //<![CDATA[
-            (function () {
-                var img = "assets/cms/images/line-icon.svg", // line 按鈕圖示
-                    title = "《" + document.title + "》",
-                    url = "http://www.wealth.com.tw/safehouse1/",
-                    href, html,
-                    text1 = "〈第一屆〉危老都更博覽會 樂居好城市";
-                text2 = "危老都更博覽會：匯聚都市更新相關產業透過博覽會的舉辦，鼓勵民眾從都更及危老重建的思考角度出發、闔家參與，善用政府的危老都更政策，搭配營建業者提出的翻修或改建方案，讓家有更好的未來！";
-            
-                // 行動裝置語法
-                if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-                    href = "http://line.naver.jp/R/msg/text/?" + title + "%0D%0A" + url + "%0D%0A" + text1 + "%0D%0A" + text2;
-                } else {
-                    // 網頁版語法
-                    href = "https://lineit.line.me/share/ui?url=" + encodeURIComponent(url);
-                }
-                html = "<a href='" + href + "' target='_blank'><img src='" + img + "'/></a>";
-                document.write(html);
-            })();
-            //]]>
-          </script>
+        <li class="sns-btn">
+          <ol>
+            <li><a class="fb" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fshuwei.wined.nctu.me%2Fhouse-renewal&amp;display=touch"><img src="assets/cms/images/fb-icon.svg"></a></li>
+            <li class="d-inline-block d-sm-none">
+              <script>
+                //<![CDATA[
+                (function () {
+                    var img = "assets/cms/images/line-icon.svg", // line 按鈕圖示
+                        title = "《" + document.title + "》",
+                        url = "http://www.wealth.com.tw/safehouse1/",
+                        href, html,
+                        text1 = "〈第一屆〉危老都更博覽會 樂居好城市";
+                    text2 = "危老都更博覽會：匯聚都市更新相關產業透過博覽會的舉辦，鼓勵民眾從都更及危老重建的思考角度出發、闔家參與，善用政府的危老都更政策，搭配營建業者提出的翻修或改建方案，讓家有更好的未來！";
+                
+                    // 行動裝置語法
+                    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                        href = "http://line.naver.jp/R/msg/text/?" + title + "%0D%0A" + url + "%0D%0A" + text1 + "%0D%0A" + text2;
+                    } else {
+                        // 網頁版語法
+                        href = "https://lineit.line.me/share/ui?url=" + encodeURIComponent(url);
+                    }
+                    html = "<a href='" + href + "' target='_blank'><img src='" + img + "'/></a>";
+                    document.write(html);
+                })();
+                //]]>
+              </script>
+            </li>
+          </ol>
         </li>
       </ul>
     </div>
