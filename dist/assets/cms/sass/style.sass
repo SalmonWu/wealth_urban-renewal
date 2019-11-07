@@ -734,7 +734,6 @@ footer
       color: #030000
       @include breakpoint($sm-up)
         font-size: 1.5rem
-
     .close 
       position: absolute
       top: 16px
@@ -819,6 +818,10 @@ footer
             font-weight: bold
           @include breakpoint($sm-up)
             font-size: 1.5rem
+      p 
+        margin: 32px 0 0 0
+        color: #666
+        font-size: 1rem
 
 #activityModal
   .modal-body
@@ -861,12 +864,12 @@ footer
     transform: translateX(-50%)
     display: flex
     display: -ms-flexbox
+    justify-content: flex-start
     -ms-flex-pack: start
     flex-wrap: wrap
     -ms-flex-wrap: wrap
     max-width: 840px
     padding: 0 0 64px
-    justify-content: center
     margin-right: -32px
   figure
     width: 100%
@@ -902,6 +905,7 @@ footer
           color: $green
           font-size: 1rem
           line-height: 28px
+
 #lotteryModal
   .modal-body
     padding: 0 0 64px
@@ -960,7 +964,7 @@ footer
           &:not(:nth-child(3n))
             margin-right: 37px
             margin-bottom: 37px
-
+            
 @keyframes jump
   0%
     transform: translateY(0px)
