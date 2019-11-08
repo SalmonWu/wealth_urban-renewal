@@ -105,5 +105,6 @@ fabric.properties
 /node_modules
 .DS_Store
 yarn.lock
+/.vscode
 
 presass
