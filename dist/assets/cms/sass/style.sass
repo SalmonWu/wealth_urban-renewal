@@ -944,12 +944,24 @@ footer
         padding: 4px
     p
       width: 100%
-      max-width: 100%
+      max-width: 650px
+      margin-bottom: 12px
       color: $grey
       font-size: 1.25rem
       line-height: 36px
+      &.item 
+        display: flex
+        display: -ms-flexbox
+        justify-content: space-between
+        -ms-flex-pack: justify
+        align-items: center
+        -ms-flex-align: center
       .value 
-        font-size: 1rem
+        font-size: 0.875rem
+      .person
+        width: 100% 
+        max-width: 74px
+        text-align: right
       .ps
         font-size: 1rem
     .award
@@ -962,10 +974,7 @@ footer
         -ms-flex-pack: center
         align-items: center
         -ms-flex-align: center
-        // overflow: hidden
         width: 270px
-        // height: 270px
-        // border: 5px solid $green
         text-align: center
         margin: 0 auto 20px auto
         img
@@ -977,8 +986,7 @@ footer
       .title
         font-size: 2.25rem
       p
-        font-size: 1.875rem
-        line-height: 56px
+        font-size: 1.5rem
         .value 
           font-size: 1.25rem
         .ps
